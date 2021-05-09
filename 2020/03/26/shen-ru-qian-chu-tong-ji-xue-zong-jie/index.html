@@ -1,0 +1,1590 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="《深入浅出统计学》总结, ECNU xingming machine-learning data-science feature-selection">
+    <meta name="baidu-site-verification" content="code-QUQTjeai5V">
+    <meta name="google-site-verification" content="code-QUQTjeai5V">
+    <meta name="360-site-verification" content="code-QUQTjeai5V">
+    <meta name="description" content="参考资料：电子工业出版社的《深入浅出统计学》一、信息图形化前言绘图软件可以减少繁重的工作，但无法代替我们思考，大多数图形模式使用没有明确的界限，但有着能够最好体现我们要给他人展示的主要事实的模式。尽管统计以事实为基础，但有时却具有误导性，学">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>《深入浅出统计学》总结 | 兴明的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ce84511d3df71640a9378a69f6293044";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    
+        <script>
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+    
+
+    <script>
+        (function(){
+        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    
+                    <span class="logo-span">兴明的博客</span>
+                </a>
+                
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-comments"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+    		<!--
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        -->
+        <div class="logo-name">兴明的博客</div>
+        <div class="logo-desc">
+            
+            华东师范大学 | 计算机科学与技术 | 机器学习
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-comments"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/superman0010" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/superman0010" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        《深入浅出统计学》总结
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/统计学/" target="_blank">
+                            <span class="chip bg-color">统计学</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/数学/" class="post-category" target="_blank">
+                            数学
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-03-26
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    兴明
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    10.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    38 分
+                </div>
+                
+                
+
+                
+                <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                    <span id="busuanzi_value_page_pv"></span>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="参考资料：电子工业出版社的《深入浅出统计学》"><a href="#参考资料：电子工业出版社的《深入浅出统计学》" class="headerlink" title="参考资料：电子工业出版社的《深入浅出统计学》"></a>参考资料：电子工业出版社的《深入浅出统计学》</h1><h1 id="一、信息图形化"><a href="#一、信息图形化" class="headerlink" title="一、信息图形化"></a>一、信息图形化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>绘图软件可以减少繁重的工作，但无法代替我们思考，大多数图形模式使用没有明确的界限，但有着能够最好体现我们要给他人展示的主要事实的模式。尽管统计以事实为基础，但有时却具有误导性，学习统计亦是学会如何正确了解数据并避免被人愚弄的良方。</p>
+<h2 id="具体内容"><a href="#具体内容" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、饼图"><a href="#一、饼图" class="headerlink" title="一、饼图"></a>一、饼图</h3><p>1、作用是将数据划分为互有明显区别的几个组，或者叫做几个类。<br>2、使用情景是在想对基本比例进行比较的时候采用，通过与其他组进行比较，可以很容易看出哪个组具有较高的频数。<br>3、缺点是当所有扇形块的大小相似时，饼图用处不大，因为此时无法根据扇形块尺寸的微小差别进行判别。<br><img src="https://img-blog.csdnimg.cn/20200326231016155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二、条形图"><a href="#二、条形图" class="headerlink" title="二、条形图"></a>二、条形图</h3><p>在各个类的大小大致相同的情况，条形图是理解的图形，因为你能更精确地指出哪个类的频数最高，也更容易发现细小的差别。</p>
+<h4 id="1、垂直条形图"><a href="#1、垂直条形图" class="headerlink" title="1、垂直条形图"></a>1、垂直条形图</h4><p><img src="https://img-blog.csdnimg.cn/20200326231549216.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、水平条形图"><a href="#2、水平条形图" class="headerlink" title="2、水平条形图"></a>2、水平条形图</h4><p>垂直条形图更常用些，但若类名称过长，则可以尝试使用水平条形图。<br><img src="https://img-blog.csdnimg.cn/20200326231816886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="3、堆积条形图"><a href="#3、堆积条形图" class="headerlink" title="3、堆积条形图"></a>3、堆积条形图</h4><p>在进行比较频数时，可以使用堆积条形图，但通过这种图形难以看出比例和百分比。<br><img src="https://img-blog.csdnimg.cn/20200326232201768.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="4、分段条形图"><a href="#4、分段条形图" class="headerlink" title="4、分段条形图"></a>4、分段条形图</h4><p>通过分段条形图，我们可以迅速看出每个类的总频数和类内的比例分布。<br><img src="https://img-blog.csdnimg.cn/20200326232334253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="三、直方图"><a href="#三、直方图" class="headerlink" title="三、直方图"></a>三、直方图</h3><p>1、当数据是被分区的数值型数据时，可以尝试使用直方图。<br>2、直方图和条形图外观形似，但有两个重要的区别。首先，每个长方形面积与频数成比例，其次，图上的长方形之间没有间隔。<br>3、可以直接观测出每个区间的频数密度水平。</p>
+<h4 id="1、等宽直方图"><a href="#1、等宽直方图" class="headerlink" title="1、等宽直方图"></a>1、等宽直方图</h4><p>将频数作为高度即可。<br><img src="https://img-blog.csdnimg.cn/20200326233222266.png" alt><br><img src="https://img-blog.csdnimg.cn/20200326233203203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、不等宽直方图"><a href="#2、不等宽直方图" class="headerlink" title="2、不等宽直方图"></a>2、不等宽直方图</h4><p>此时应将频数作为面积并计算出高度。<br><img src="https://img-blog.csdnimg.cn/20200326233427348.png" alt><img src="https://img-blog.csdnimg.cn/20200326233454181.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="四、累积频数图"><a href="#四、累积频数图" class="headerlink" title="四、累积频数图"></a>四、累积频数图</h3><p>在希望显示某个特定值以内的频数之和，如5小时内所有的人数。<br><img src="https://img-blog.csdnimg.cn/20200326234059339.png" alt><img src="https://img-blog.csdnimg.cn/20200326234122756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="五、折线图"><a href="#五、折线图" class="headerlink" title="五、折线图"></a>五、折线图</h3><p>1、折线图能很好地体现数据趋势，常用于显示随时间变化的数值。<br>2、像其他图形一样，在纵轴上显示频数还是百分数，主要取决于想凸显的主要事实<img src="https://img-blog.csdnimg.cn/20200326234411857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="六、标度的选择"><a href="#六、标度的选择" class="headerlink" title="六、标度的选择"></a>六、标度的选择</h3><p>使用百分比而不显示频数，则会使人忽略样本集本身的大小，使特定的抽样结果误认为普遍的结论。<br>使用频数而不显示百分比，则会使人看到数据更加片面，难以从整体情况进行分析。</p>
+<h1 id="二、集中趋势的度量"><a href="#二、集中趋势的度量" class="headerlink" title="二、集中趋势的度量"></a>二、集中趋势的度量</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><p>从一大堆数字中察觉出模式和趋势颇为不易，而求出平均数往往是把握全局的第一步。当我们有了平均数时就能迅速得找出数据中最具代表性的数值——典型值，得出重要的结论。</p>
+<h2 id="具体内容-1"><a href="#具体内容-1" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、均值"><a href="#一、均值" class="headerlink" title="一、均值"></a>一、均值</h3><p>1、计算方法是将所有样本值之和除以总样本数。<br>2、优点是对于抽样数据而言更加稳定，不会因为添加一些样本而导致结果剧烈波动。<br>3、缺点是当出现与其他数据格格不入的极高或极低的异常值时，异常值会将数据向左或向右拉，从而产生偏移数据，换句话说，异常值的出现会将均值的算法进行扭曲，从而难以实现本应表达的主要事实。<br><img src="https://img-blog.csdnimg.cn/20200327151221457.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="1、向左偏斜"><a href="#1、向左偏斜" class="headerlink" title="1、向左偏斜"></a>1、向左偏斜</h4><p>当异常值位于低端时，会把均值向左拉伸，显出一条尾部，此时均值将小于大部分的值。<br><img src="https://img-blog.csdnimg.cn/20200327151543143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、向右偏斜"><a href="#2、向右偏斜" class="headerlink" title="2、向右偏斜"></a>2、向右偏斜</h4><p>此时，均值将大于大部分的值。<br><img src="https://img-blog.csdnimg.cn/20200327151946661.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="3、对称数据"><a href="#3、对称数据" class="headerlink" title="3、对称数据"></a>3、对称数据</h4><p>使用均值时最理想的数据分布。<br><img src="https://img-blog.csdnimg.cn/20200327152047922.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二、中位数"><a href="#二、中位数" class="headerlink" title="二、中位数"></a>二、中位数</h3><p>1、计算方法是按样本值按升序排列，此时若数值总个数为奇数时，则选取最中间的数值，若数值总个数为偶数时，则选取最中间的两个值的均值。<br>2、优点是不会受到异常值的影响，更容易获取位于数据集中区的值。<br>3、缺点是当一批数据集中包含两组数据时，此时添加一些样本，可能会使中位数出现巨大的波动，从而产生误导性。<img src="https://img-blog.csdnimg.cn/20200327154455705.png" alt></p>
+<h3 id="三、众数"><a href="#三、众数" class="headerlink" title="三、众数"></a>三、众数</h3><p>1、计算方法是从数据集中选取频数最大的数值，也就是最常见的数值，并且众数可以同时有多个，比如一批数据集中多个组具有相同的最高频数。<br>2、优点是是众多平均数之中唯一可以用于类别数据的算法，同时也适用于数值数据的使用。<br>3、缺点是当一批数据集中众数个数过多时，将没有很大的作用。<img src="https://img-blog.csdnimg.cn/20200327155132490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="四、三种平均数的共性"><a href="#四、三种平均数的共性" class="headerlink" title="四、三种平均数的共性"></a>四、三种平均数的共性</h3><p>对于同一批数据集，对每个样本值同时添加2000或增长10%，那么三种平均数也会一同添加2000或增长10%，无法因为这种操作而厚此薄彼。</p>
+<h3 id="五、平均数的选取可能产生人为的误导"><a href="#五、平均数的选取可能产生人为的误导" class="headerlink" title="五、平均数的选取可能产生人为的误导"></a>五、平均数的选取可能产生人为的误导</h3><p><img src="https://img-blog.csdnimg.cn/2020032715571267.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200327155627786.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="三、分散性和变异性的量度"><a href="#三、分散性和变异性的量度" class="headerlink" title="三、分散性和变异性的量度"></a>三、分散性和变异性的量度</h1><h2 id="前言-2"><a href="#前言-2" class="headerlink" title="前言"></a>前言</h2><p>平均数能让我们知道数据集典型值——数据中心所在处，但若要给数据下具体的结论，则还是缺少足够的信息。通过分析各种距和差，来判断数据集离平均值的波动程度。</p>
+<h2 id="具体内容-2"><a href="#具体内容-2" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、全距"><a href="#一、全距" class="headerlink" title="一、全距"></a>一、全距</h3><p>1、通过计算全距，我们可以轻易获知数据分散情况。全距可以指出数据的扩展范围，类似于测量数据的宽度。<br>2、计算方法是通过用数据集中的最大数减去数据集中的最小数。其中最小值称为下界，最小值称为上界。<br>3、优点是计算十分简单。<br>4、缺点是仅仅描述了数据的宽度，没有描述数据在上下界之间的分布形态，难以得出数据的真实分布形态。当存在异常值时，可能导致全距过大，即易受异常值的影响。<br><img src="https://img-blog.csdnimg.cn/20200328220717698.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二、迷你距"><a href="#二、迷你距" class="headerlink" title="二、迷你距"></a>二、迷你距</h3><p>不再度量整个数据集的全距，而是度量中央部分数据集的全距，通过迷你距可以有效忽略异常值的存在。而通过一个统一的方法来对数据集进行划分，将有助于我们确保多批数据集处理时所有都是以相同的方式忽略了异常值。<br><img src="https://img-blog.csdnimg.cn/20200328221615168.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="1、四分位距"><a href="#1、四分位距" class="headerlink" title="1、四分位距"></a>1、四分位距</h4><p>1、计算步骤是通过将数据进行升序排列，选取其中三个特定位置的数据点来四等份数量划分数据集，并从左到右的称三个点叫作下四分位数、中位数和上四分位数，而四分位距的值便是上四分位数减去下四分位数的差。<br>2、优点是由于剔除掉头尾各1/4的数据——较小和较大的那一批数据，因此自然而然得把作为极大值或极小值的异常值也一同排除在外了。<br>3、意义是可以对几个数据集进行比较且比较结果不会被异常值扭曲。<br><img src="https://img-blog.csdnimg.cn/2020032822281443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>4、下、上四分位数的位置的快速计算方法如下<br><img src="https://img-blog.csdnimg.cn/20200328223010994.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200328223020536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、百分位距"><a href="#2、百分位距" class="headerlink" title="2、百分位距"></a>2、百分位距</h4><p>1、如果我们将一批数据分成一百份的话，那么起分割作用数值就被称作百分位数，通常，第K百分位数就是位于数据范围K%处的数值，常用Pk表示。<br>2、百分位距不太常用，但对于划分名次、排行却很用有，比如一场考试中第90百分位数是50分，那么可以推测出50分高于等于其他90%的人的分数。<br><img src="https://img-blog.csdnimg.cn/20200328223942991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>3、计算步骤如下<br><img src="https://img-blog.csdnimg.cn/20200328224009805.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="三、箱线图"><a href="#三、箱线图" class="headerlink" title="三、箱线图"></a>三、箱线图</h3><p>1、箱线图是一种专门显示各种各样的距的图形，它可以用直观的方法比较多批数据的全局、四分位距和中位数。<br>2、计算步骤如下<br><img src="https://img-blog.csdnimg.cn/20200329093058414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200329093350352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="四、方差和标准差"><a href="#四、方差和标准差" class="headerlink" title="四、方差和标准差"></a>四、方差和标准差</h3><p>1、方差是量度数据分散性的一种方法，是数值与均值的距离的平方数的平均值。${\delta}^2=\frac{\sum {(x-u)}^2}{n}$<br>2、标准差通过与均值的距离来指出分散性，比方差更加直观。$\delta =\sqrt{\frac{\sum {(x-u)}^2}{n}}$<br>3、标准差的计量单位与相应数据的单位一致，即若以“厘米”进行计量，当标准差为1时，表示在典型情况下，数值与均值相距1厘米。<br>4、当数据均相等时，标准差为0。</p>
+<h3 id="五、标准分"><a href="#五、标准分" class="headerlink" title="五、标准分"></a>五、标准分</h3><p>1、通过标准分使多批数据集转化成一种统一通用的分布，进而可以对不同数据集的数据进行比较，而这些不同数据集特性可以互不相同，比如各均值和标准差各不相同。$z=\frac{x-u}{\delta}$<br>2、通过标准分来判断球员在自身历史数据中发挥的如何，是超长发挥还是发挥失利，同时可以判断两个球员的发挥进行比较。<img src="https://img-blog.csdnimg.cn/20200329095857596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="六、图形的鉴别"><a href="#六、图形的鉴别" class="headerlink" title="六、图形的鉴别"></a>六、图形的鉴别</h3><p>左图相较于右图而言更加宽阔，这表明其数据大多与均值相距甚远，左图对应的球员1发挥的稳定性不如球员2，具备更多的不可确定性，难以预测他在将来某一场球赛的发挥。<br><img src="https://img-blog.csdnimg.cn/20200329100252228.png" alt><img src="https://img-blog.csdnimg.cn/20200329100259631.png" alt="     "></p>
+<h1 id="四、概率计算"><a href="#四、概率计算" class="headerlink" title="四、概率计算"></a>四、概率计算</h1><h2 id="前言-3"><a href="#前言-3" class="headerlink" title="前言"></a>前言</h2><p>内容完全是《概率论》的基础知识，故不展开总结。需要指出的是，概率计算的重点应该根据现有的概率去推算出目标概率值。<br>@<a href="本篇目录">TOC</a></p>
+<h2 id="具体内容-3"><a href="#具体内容-3" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、概率"><a href="#一、概率" class="headerlink" title="一、概率"></a>一、概率</h3><h3 id="二、条件概率"><a href="#二、条件概率" class="headerlink" title="二、条件概率"></a>二、条件概率</h3><p>$P(A|B)=\frac{P(A \cap B)}{P(B)}$</p>
+<h3 id="三、全概率公式"><a href="#三、全概率公式" class="headerlink" title="三、全概率公式"></a>三、全概率公式</h3><p>$P(B)=P(A) \times P(B|A)+P(A’) \times P(B|A’)$</p>
+<h3 id="四、贝叶斯公式"><a href="#四、贝叶斯公式" class="headerlink" title="四、贝叶斯公式"></a>四、贝叶斯公式</h3><p>$P(A|B)=\frac{P(A) \times P(B|A)}{P(A) \times P(B|A)+P(A’) \times P(B|A’)}$</p>
+<h3 id="五、相交、互斥和独立事件"><a href="#五、相交、互斥和独立事件" class="headerlink" title="五、相交、互斥和独立事件"></a>五、相交、互斥和独立事件</h3><p>1、相交，$P(x_1)+P(x_2)&gt;1$。<br>2、互斥，$P(x_1)+P(x_2)=1$<br>3、独立，$P(x_1<em>x_2)=P(x_1)</em>P(x_2)$。</p>
+<h3 id="六、绘图工具"><a href="#六、绘图工具" class="headerlink" title="六、绘图工具"></a>六、绘图工具</h3><h4 id="1、维恩图"><a href="#1、维恩图" class="headerlink" title="1、维恩图"></a>1、维恩图</h4><p>主要用于指出基本概率及各种关系。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200329122346463.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、概率树"><a href="#2、概率树" class="headerlink" title="2、概率树"></a>2、概率树</h4><p>主要用于条件概率的计算。当忘了条件概率的公式时，通过勾画概率树也能轻松地解决。<br><img src="https://img-blog.csdnimg.cn/20200329121836526.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="五、离散概率分布的运用"><a href="#五、离散概率分布的运用" class="headerlink" title="五、离散概率分布的运用"></a>五、离散概率分布的运用</h1><h2 id="前言-4"><a href="#前言-4" class="headerlink" title="前言"></a>前言</h2><p>概率可以得知发生事件的可能性，但无法指出所发生的的这些事情的整体影响，也无法指出这种整体影响对我们的具体影响，通过期望来预测长期结果，并利用方差来度量这些预测结果的确定性。</p>
+<h2 id="具体内容-4"><a href="#具体内容-4" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、概率分布"><a href="#一、概率分布" class="headerlink" title="一、概率分布"></a>一、概率分布</h3><p>若有一台老虎机，只有三个窗口全部恰到好处时，才会有成堆的硬币滚滚而下，并且每局特定组合对应的客户收益规则和一台老虎机的每个窗口出现特定图像的概率如下<br><img src="https://img-blog.csdnimg.cn/20200330160409245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br><img src="https://img-blog.csdnimg.cn/20200330160421350.png" alt><br>那么通过对每一情况进行概率计算，    收益的概率分布应如下<img src="https://img-blog.csdnimg.cn/20200330160623833.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二、期望"><a href="#二、期望" class="headerlink" title="二、期望"></a>二、期望</h3><p>期望如常规数据的均值，只能给出位于中心的典型值。通过期望，来判断出在典型情况下可以期望每一局赢多少或赔多少。<img src="https://img-blog.csdnimg.cn/20200330161009593.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>其意义是在多次拉杆后，我们能够期望每一局赔掉0.77美元，也就是说，如果玩100次老虎机，我们会期望赔掉77美元。</p>
+<h3 id="三、方差"><a href="#三、方差" class="headerlink" title="三、方差"></a>三、方差</h3><p>方差用来全面体现出结果的分散性，换句话说是体现出每一局赌局有可能存在的收益变化。<br><img src="https://img-blog.csdnimg.cn/20200330161538617.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="四、标准差"><a href="#四、标准差" class="headerlink" title="四、标准差"></a>四、标准差</h3><p>概率分布的标准差和数据集的标准差作用相似，是一种度量数据与数据中心的期望距离的方法。<br>如老虎机收益的标准差则是$\sqrt{2.6971}$，即1.642，这表示从平均情况来看，我们的每一局收益与期望收益-0.77之间的距离是1.642。一般而言，标准差高的老虎机表示整体收益变化大得多，整体上的赢钱数额更不可预期。</p>
+<h3 id="五、单个随机变量的线性变换——Z-aX-b"><a href="#五、单个随机变量的线性变换——Z-aX-b" class="headerlink" title="五、单个随机变量的线性变换——Z=aX+b"></a>五、单个随机变量的线性变换——Z=aX+b</h3><p>现在假设老虎机每一局拉杆的赌本是1美元变成了2美元，而赢金翻了5倍。此时赢局新的概率分布应如下<br><img src="https://img-blog.csdnimg.cn/20200330162458853.png" alt><br>此时若要求出新随机变量Y的期望和方差，可以不需要再进行公式复杂的运算，可以直接借助与Y有线性关系的X的期望和方差，可以看出<b>Y=5X+3</b>。<br>值得注意地是，此时只是数值变成新值——收益，但基础概率仍保持不变。<br><img src="https://img-blog.csdnimg.cn/20200330163047347.png" alt></p>
+<h3 id="六、多个随机变量的复合——Z-X1-X2"><a href="#六、多个随机变量的复合——Z-X1-X2" class="headerlink" title="六、多个随机变量的复合——Z=X1+X2"></a>六、多个随机变量的复合——Z=X1+X2</h3><p>当我们想在一台老虎机上玩两局时，那么我们仍需要重新计算概率分布，但需要注意地是此时不仅数值变成新值，同时基础概率也发生了变化。<br><img src="https://img-blog.csdnimg.cn/20200330163741490.png" alt><br>若记第一局的收益变量为X1，而第二局的收益变量为X2，那么<b>W=X1+X2</b>的期望和方差应为如下<br><img src="https://img-blog.csdnimg.cn/2020033016422075.png" alt><img src="https://img-blog.csdnimg.cn/20200330164144837.png" alt><br><b>需要注意的是，此时W是X1+X2，而非W=2X1，因为在这个背景下W的基础概率发生了变化。此类变化也可以引申至一共玩两局，每局玩不同的老虎机，此时两台老虎机对应的概率分布互不相同，W=X+Y。</b><br><img src="https://img-blog.csdnimg.cn/20200330164530867.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="七、多个随机变量的复合的进阶——Z-aX-b-cY-d"><a href="#七、多个随机变量的复合的进阶——Z-aX-b-cY-d" class="headerlink" title="七、多个随机变量的复合的进阶——Z=aX+b+cY+d"></a>七、多个随机变量的复合的进阶——Z=aX+b+cY+d</h3><p>若一共玩两局，每一局用不同的老虎机，此时已求出W1=X+Y，当两台老虎机的本金和赢金规则均发生变化，即每一台数值变成新数值但基础概率都没有发生变化，对应的线性变换分别为aX+b，cY+d，那么两局对应的概率分布应为<b>W2=aX+b+cY+d</b>，此时W2的期望和方差可以通过EX、DX、EY和DY直接计算。</p>
+<h3 id="八、比较特殊的复合——Z-X-Y"><a href="#八、比较特殊的复合——Z-X-Y" class="headerlink" title="八、比较特殊的复合——Z=X-Y"></a>八、比较特殊的复合——Z=X-Y</h3><p><img src="https://img-blog.csdnimg.cn/20200330165822969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200330165843292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="六、排列与组合"><a href="#六、排列与组合" class="headerlink" title="六、排列与组合"></a>六、排列与组合</h1><h2 id="前言-5"><a href="#前言-5" class="headerlink" title="前言"></a>前言</h2><p>顺序是概率计算过程中不可避免的事情，通过学习简便方法来完成概率计算的进阶。</p>
+<h2 id="具体内容-5"><a href="#具体内容-5" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、全排列"><a href="#一、全排列" class="headerlink" title="一、全排列"></a>一、全排列</h3><h4 id="1、个体排名"><a href="#1、个体排名" class="headerlink" title="1、个体排名"></a>1、个体排名</h4><h5 id="I、普通排位"><a href="#I、普通排位" class="headerlink" title="I、普通排位"></a>I、普通排位</h5><p>现有N匹赛马，那么它们所有可能的排列顺序为N！。</p>
+<h5 id="II、圆形排位"><a href="#II、圆形排位" class="headerlink" title="II、圆形排位"></a>II、圆形排位</h5><p>现有N匹赛马，要求所有马匹围成一圈。<br>1、如果只考虑马匹的绝对位置的话，则所有可能排列顺序为N !。<br>2、如果需要考虑马匹之间的相对位置的话，则会出现排位不同，但实际上是同一样的，此时可任意选择一个马匹定位，其余N-1个马匹进行全排列，那么所有可能排列顺序则为(N-1)！。<img src="https://img-blog.csdnimg.cn/20200331142730905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>3、在2的基础上，进一步判定顺时针和逆时针排位是同一种情况来计算，那么所有可能的排位顺序为(N-1)！/2。</p>
+<h4 id="2、类型排名"><a href="#2、类型排名" class="headerlink" title="2、类型排名"></a>2、类型排名</h4><p>如果要为N个对象排位，其中包括第一类对象K个，第二类对象J个，第三类对象M个…则排位方式数目的计算式为$\frac{N!}{J!K!M!…}$。<br>比如此时有3匹普通马、2匹斑马和5匹骆驼一同参加比赛，所有动物得冠军的可能性均相同，那么如果只对动物种类的排名感兴趣，所有的排名方式一共有$\frac{10!}{3!2!5!}$=252种。</p>
+<h3 id="二、部分排列"><a href="#二、部分排列" class="headerlink" title="二、部分排列"></a>二、部分排列</h3><p>部分排列是指从给一个N个对象群体中取出R个对象进行排序，并得出排序方式总数目$\frac{N!}{(N-R)!}$。<br>比如一共有20匹赛马进行比赛，那么前三甲的具体排名的所有可能为$\frac{20!}{17!}$种。</p>
+<h3 id="三、组合"><a href="#三、组合" class="headerlink" title="三、组合"></a>三、组合</h3><p>组合是指从N个对象群体中取出R个对象，但不必知道所选对象的确切顺序的情况下，所有可能有$\frac{N!}{R!(N-R)!}$种。<br>比如一共有20匹赛马进行比赛，那么确定前三名包括哪些马时一共有$\frac{20!}{3!17!}$种猜测结果。</p>
+<h1 id="七、几何分布、二项分布及泊松分布"><a href="#七、几何分布、二项分布及泊松分布" class="headerlink" title="七、几何分布、二项分布及泊松分布"></a>七、几何分布、二项分布及泊松分布</h1><h2 id="前言-6"><a href="#前言-6" class="headerlink" title="前言"></a>前言</h2><p>善用一些特殊的概率分布，可以让我们对一些问题能以前所未有的速度计算概率、期望和方差。</p>
+<h2 id="具体内容-6"><a href="#具体内容-6" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="几何分布-X-Geo-p"><a href="#几何分布-X-Geo-p" class="headerlink" title="几何分布  X~Geo( p )"></a>几何分布  X~Geo( p )</h3><p>1、目的：为了取得第一次成功，需要进行多少次试验。<br>2、应用条件：进行一系列独立试验，每一次试验或成功或失败，每一次试验的成功概率p相同。<br>3、基础公式：<br>$P(X=r)=pq^{r-1}$ $\qquad P(X&gt;r)=q^r$ $\qquad P(X \leq r)=1-q^r$ $\qquad E(X)=1/p$ $\qquad D(X)=q/p^2$   <img src="https://img-blog.csdnimg.cn/2020040117102617.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二项分布-X-B-n-p"><a href="#二项分布-X-B-n-p" class="headerlink" title="二项分布 X~B(n,p)"></a>二项分布 X~B(n,p)</h3><p>1、目的：在n次试验中能成功多少次。<br>2、应用条件：进行一系列次数有限的独立试验，每一次试验或成功或失败，每一次试验的成功概率p相同。<br>3、基础公式：<br>$P(X=r)=C_n^rp^rq^{n-r}$ $\qquad E(X)= np$ $\qquad D(X)=npq$<br><img src="https://img-blog.csdnimg.cn/20200401170905420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200401170926179.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="泊松分布-X-Po-lambda"><a href="#泊松分布-X-Po-lambda" class="headerlink" title="泊松分布 X~Po($\lambda$)"></a>泊松分布 X~Po($\lambda$)</h3><p>1、目的：想知道给定区间内的事件发生次数。<br>2、应用条件：单个事件在给定区间内随机、独立地发生，已知给定区间内的事件平均发生次数，或者叫发生率，且这个发生次数或发生率是有限的。<br>3、基础公式：<br>$P(X=r)=\frac{e^{-\lambda} \lambda^r}{r!}$ $\qquad E(X)= \lambda$ $\qquad D(X)=\lambda$<br>4、如果X<del>Po($\lambda x$)，X</del>Po($\lambda y$)，且X和Y是相互独立的，那么X+Y<del>Po($\lambda_x +\lambda_y$)。<br>5、如果X</del>B(n,p)，其中n足够大，p足够小，则可将该部分近似看作X ~Po(np)。<b>主要用于当使用二项分布时计算量过于庞大时，利用泊松分布来便捷计算。</b></p>
+<p><img src="https://img-blog.csdnimg.cn/20200401171004360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/2020040117114862.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200401171409676.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="八、正态分布的运用"><a href="#八、正态分布的运用" class="headerlink" title="八、正态分布的运用"></a>八、正态分布的运用</h1><h2 id="前言-7"><a href="#前言-7" class="headerlink" title="前言"></a>前言</h2><p>并非所有数据集合都是离散的、可以指定确切数值的概率分布，其中也有数值型的概率分布，最典型的便是正态分布。</p>
+<h2 id="具体内容-7"><a href="#具体内容-7" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="离散型和数据型数据"><a href="#离散型和数据型数据" class="headerlink" title="离散型和数据型数据"></a>离散型和数据型数据</h3><p>离散型数据就像一块块垫脚石，可以从一个数值跳到另一个数值，同时每个数值之间都有明确的间隔。连续型数据往往通过测量得到，而不是通过计数得到，测量结果在很大程度上取决于测量精度要求。<br>在处理连续数据的时候，实际上是考虑一个可以接受的精度，比如我们想要10英寸的细线，但实际上这种测量本身并不精确，我们可能要的只是能满足一定范围的细线就可以了，比如9.5英寸到10.5英寸之间的细线。也因为如此，在连续概率分布中，我们想求一确定无疑的数值的概率时会发现其始终为0，因为根本难以达到那种精度。<br>对于离散概率分布，我们关心的是取得一个特定数值的概率，而对于连续概率分布来说，我们关心的是取得一个特定范围的概率。</p>
+<h3 id="概率密度函数"><a href="#概率密度函数" class="headerlink" title="概率密度函数"></a>概率密度函数</h3><p>概率密度函数描述连续随机变量的概率分布，它给我们指出了该概率分布的形状，并开辟了计算概率的道路。<img src="https://img-blog.csdnimg.cn/20200401200015369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h3><p>正态分布之所以被称为正态，是因为它的形态看起来呵护理想，在遇到测量值之类的大量连续数据时，你通过很期望数据符合这种形态。<img src="https://img-blog.csdnimg.cn/20200401200304468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>$\mu$指出曲线的中央位置，$\delta^2$指出分散性，这也意味着$\delta^2$越大，正态分布曲线越扁平、越宽。值得指出的是，在正态分布中，概率密度始终不可能为0，因为不管多少难发生但多少有些可能。<img src="https://img-blog.csdnimg.cn/20200401201244160.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="正态概率计算"><a href="#正态概率计算" class="headerlink" title="正态概率计算"></a>正态概率计算</h3><p>1、确定分布与范围：如果正态分布适用于所遇到的情况，那看看是否能求出均值和标准差。因为只有先得知这些，我们才能只有正态分布的特性。<br>2、标准化：利用标准分来将其他非标准正态分布转化成N(0,1)标准正态分布。$Z=\frac{X-u}{\delta}$<img src="https://img-blog.csdnimg.cn/20200401203136715.png" alt><img src="https://img-blog.csdnimg.cn/20200401203150481.png" alt><br>3、利用概率表查找概率：通过标准分，利用标准正态概率表可以查找任何z值，进而查出相应概率P(Z&lt;z)。<br><img src="https://img-blog.csdnimg.cn/20200401203704783.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="九、再谈正态分布的运用"><a href="#九、再谈正态分布的运用" class="headerlink" title="九、再谈正态分布的运用"></a>九、再谈正态分布的运用</h1><h2 id="前言-8"><a href="#前言-8" class="headerlink" title="前言"></a>前言</h2><p>当一个问题使用二项分布和泊松分布的计算量都过大时，可以考虑尝试用正态分布进行近似求解。</p>
+<h2 id="具体内容-8"><a href="#具体内容-8" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、正态分布的复合"><a href="#一、正态分布的复合" class="headerlink" title="一、正态分布的复合"></a>一、正态分布的复合</h3><h4 id="1、X-Y的复合"><a href="#1、X-Y的复合" class="headerlink" title="1、X+Y的复合"></a>1、X+Y的复合</h4><p>在研究综合正态变量的时候，想办法求出X+Y的分布是十分有用的。如果独立随机变量X和Y均符合正态分布，那么可以得知X+Y也一定符合正态分布。在两个变量相加之后，实际上会增大了变异性，因此新分布的方差会增大，图形拉长，而为了保持图形总面积始终为1，因此图形同时也随之变扁。<br><img src="https://img-blog.csdnimg.cn/20200402115731604.png" alt><img src="https://img-blog.csdnimg.cn/20200402120712525.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200402120739339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、X-Y的复合"><a href="#2、X-Y的复合" class="headerlink" title="2、X-Y的复合"></a>2、X-Y的复合</h4><p>有时候我们并非要求X+Y的概率，而是求X-Y的概率。如果独立随机变量X和Y均符合正态分布，那么可以得知X-Y也一定符合正态分布。<b>但值得注意的是，尽管我们用X-Y，但实际上变异性仍然如X+Y一般增大了。</b><br><img src="https://img-blog.csdnimg.cn/20200402120304620.png" alt><img src="https://img-blog.csdnimg.cn/20200402120818581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200402120851447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二、复合与线性变换的区别"><a href="#二、复合与线性变换的区别" class="headerlink" title="二、复合与线性变换的区别"></a>二、复合与线性变换的区别</h3><h4 id="1、线性变换"><a href="#1、线性变换" class="headerlink" title="1、线性变换"></a>1、线性变换</h4><p>1、线性变换描述的是概率分布中的数值在大小方面的基本变化，比如我们想算的是4个成年人的体重导致翻车的概率，而不是一个成年人的体重翻四倍导致翻车的概率。<b>值得指出的是，选择不同的方法解释——复合或者线性变换，会导致计算结果出现差异。</b></p>
+<p><img src="https://img-blog.csdnimg.cn/20200402121003684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>2、如果我们有一个X的线性变换aX+b，其中若X为正态分布——X~N($\mu,\delta^2$)，那么aX+b也属于正态分布。<br><img src="https://img-blog.csdnimg.cn/20200402121733116.png" alt></p>
+<h4 id="2、复合"><a href="#2、复合" class="headerlink" title="2、复合"></a>2、复合</h4><p>当我们实际需要计算的是4位成年人的综合体重的概率分布，而不是对某一成年人的体重进行变换时，可以采用复合。<br><img src="https://img-blog.csdnimg.cn/20200402164327495.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200402164503346.png" alt></p>
+<h3 id="三、用正态分布近似二项分布"><a href="#三、用正态分布近似二项分布" class="headerlink" title="三、用正态分布近似二项分布"></a>三、用正态分布近似二项分布</h3><h4 id="1、基本条件"><a href="#1、基本条件" class="headerlink" title="1、基本条件"></a>1、基本条件</h4><p>当二项分布的形状看上去和正态分布的形状十分相似，那么在这种情况下，我们可以用正态分布代替二项分布。更加细致化的话，一般来说，当np和nq双双大于5时，可用正态分布近似代替二项分布。<img src="https://img-blog.csdnimg.cn/20200402165422244.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br><img src="https://img-blog.csdnimg.cn/20200402164850776.png" alt></p>
+<h4 id="2、注意事项"><a href="#2、注意事项" class="headerlink" title="2、注意事项"></a>2、注意事项</h4><p>我们通过二项分布X<del>B(12，0)求P(X &lt;a)的概率，若直接将二项分布转化成其对应的正态分布X</del> N(6，3)，，用二项分布计算的结果是0.387，用正态分布计算的是0.5，此时将发现近似结果出现较大的误差。这主要是因为前者是离散分布，而后者是连续分布。<img src="https://img-blog.csdnimg.cn/20200402170413195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>因此我们在进行近似计算时，需要先考虑<b>连续性修正</b>，比如修改为求P(X&lt;5.5)，此时结果为0.3859，非常近似二项分布的结果。<br><img src="https://img-blog.csdnimg.cn/20200402170930201.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200402170951249.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="3、二项分布的近似方法的选择"><a href="#3、二项分布的近似方法的选择" class="headerlink" title="3、二项分布的近似方法的选择"></a>3、二项分布的近似方法的选择</h4><p>如果X~B(n,p)，当np&gt;5且nq&gt;5时，使用正态分布近似代替二项分布。<br>如果n&gt;50且p&lt;0.1，则可以使用泊松分布近似代替二项分布。</p>
+<h3 id="四、用正态分布近似泊松分布"><a href="#四、用正态分布近似泊松分布" class="headerlink" title="四、用正态分布近似泊松分布"></a>四、用正态分布近似泊松分布</h3><h4 id="1、基本条件-1"><a href="#1、基本条件-1" class="headerlink" title="1、基本条件"></a>1、基本条件</h4><p>当$\lambda$很小时，泊松分布的曲线左偏，与正态分布对称的曲线不符，因此不适用。一般而言，如果X<del>Po($\lambda$)且$\lambda$ &gt;15，我们就能用X</del>N($\lambda$,$\lambda$)来近似计算。</p>
+<h4 id="2、注意事项-1"><a href="#2、注意事项-1" class="headerlink" title="2、注意事项"></a>2、注意事项</h4><p>和正态分布近似二项分布一般，也需要先进行<b>连续型修正</b>才行。</p>
+<h1 id="十、统计抽样的运用"><a href="#十、统计抽样的运用" class="headerlink" title="十、统计抽样的运用"></a>十、统计抽样的运用</h1><h2 id="前言-9"><a href="#前言-9" class="headerlink" title="前言"></a>前言</h2><p>当事件数量十分庞大时，我们很难决定该从哪处收集数据。通过统计抽样的方法来实现如何在实际工作中成功收集数据——有效地、正确地、省时省力地。</p>
+<h2 id="具体内容-9"><a href="#具体内容-9" class="headerlink" title="具体内容"></a>具体内容</h2><p>通过在总体抽取一个好的样本，使其具有代表性，即样本具有与总体十分相似的特性，进而可以根据样本来预测总体的特性，比如数据中心相同。<img src="https://img-blog.csdnimg.cn/20200404104555889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="样本的设计"><a href="#样本的设计" class="headerlink" title="样本的设计"></a>样本的设计</h3><p>1、确定目标总体：因为只有先弄清目标总体所在处，才能知道样本取自哪里。<img src="https://img-blog.csdnimg.cn/20200404104940716.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>2、确定抽样单位：比如可以是一粒口香糖球，也可以是一盒口香糖球。<img src="https://img-blog.csdnimg.cn/20200404105055799.png" alt><br>3、确定抽样空间：涵盖整个目标总体的抽样空间表。<img src="https://img-blog.csdnimg.cn/20200404105232110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200404105846443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="偏倚的来源"><a href="#偏倚的来源" class="headerlink" title="偏倚的来源"></a>偏倚的来源</h3><p>偏倚样本无法代表目标总体，由于样本与总体的特性不相似，故无法根据样本对总体作出正确的判断。<img src="https://img-blog.csdnimg.cn/2020040410534747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>样本偏倚的产生诱因主要有：<br><img src="https://img-blog.csdnimg.cn/20200404105406756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>如上所述，偏倚来源广泛，而其中大部分是归咎于样本选取方法，通过检查样本的选取方法，使偏倚的发生几率降至最低程度。</p>
+<h3 id="样本的选择"><a href="#样本的选择" class="headerlink" title="样本的选择"></a>样本的选择</h3><h4 id="1、简单随机抽样"><a href="#1、简单随机抽样" class="headerlink" title="1、简单随机抽样"></a>1、简单随机抽样</h4><p>通过随机过程选取一个大小为n的样本，所有大小为n的可能样本被选中的可能性都相同。</p>
+<h5 id="I-重复抽样"><a href="#I-重复抽样" class="headerlink" title="I. 重复抽样"></a>I. 重复抽样</h5><p>在选取一个抽样单位并记录下这个抽样单位的相关信息之后，再将这个单位放回总体中。如在街上提问，你可能问了一个人多次。</p>
+<h5 id="II-不重复抽样"><a href="#II-不重复抽样" class="headerlink" title="II. 不重复抽样"></a>II. 不重复抽样</h5><p>不再将抽样单位放回总体。如口香糖球检验，尝过的口香糖球是不会被放回总体的。</p>
+<h5 id="III-样本的选取"><a href="#III-样本的选取" class="headerlink" title="III.样本的选取"></a>III.样本的选取</h5><p>1、抽签    2、随机编号生成器</p>
+<h5 id="IV-简单随机抽样的缺点"><a href="#IV-简单随机抽样的缺点" class="headerlink" title="IV. 简单随机抽样的缺点"></a>IV. 简单随机抽样的缺点</h5><p>仍然存在样本无法代表总体的可能性，因为是随机的，存在万一。比如可能最终抽取到的全是黄色口香糖球，而错失其他颜色。</p>
+<h4 id="2、分层抽样"><a href="#2、分层抽样" class="headerlink" title="2、分层抽样"></a>2、分层抽样</h4><p>将总体分割为几个相似的组，每个组具有类似的特性，为此需查看每一个层在总体中所占的比例，然后按照相应比例从每一个层中抽取抽样单位。比如若总体中红色球占百分之五十，那么样本的百分之五十应该是红色球。</p>
+<h4 id="3、整群抽样"><a href="#3、整群抽样" class="headerlink" title="3、整群抽样"></a>3、整群抽样</h4><p>进行整群抽样时，不是对抽样单位进行简单随机抽样，而是对群进行简单随机抽样，然后对每一个群的各种特性进行调查，比如我们可以对一盒盒口香糖球进行简单随机抽样，然后品尝这些盒子里的糖球的味道。<br>它的优点是不需要使用总体抽样空间就可以进行整群抽样，比如我们在调查数目情况，并把几片特定的森林作为群，则只需要了解那几片森林中的数目就行了。<br><b>整群抽样之所以行得通，是因为群与群相互之间很相似。</b><br><img src="https://img-blog.csdnimg.cn/20200404112124632.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="4、系统抽样"><a href="#4、系统抽样" class="headerlink" title="4、系统抽样"></a>4、系统抽样</h4><p>按照某种顺序列出总体名单，然后每K个单位进行一次调查。比如可以选择每10个样本抽样一次。<br>其优点是快捷简单，但缺点是若总体中存在某种循环模式，则样本将发生偏倚。<br><img src="https://img-blog.csdnimg.cn/20200404112328453.png" alt><img src="https://img-blog.csdnimg.cn/20200404112412958.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="十一、总体和样本的估计"><a href="#十一、总体和样本的估计" class="headerlink" title="十一、总体和样本的估计"></a>十一、总体和样本的估计</h1><h2 id="前言-10"><a href="#前言-10" class="headerlink" title="前言"></a>前言</h2><p>利用样本准确地预测总体，并以一定方式说明预测结果的可靠程度，通过样本了解总体，并学习如何反过来通过总体了解样本。</p>
+<h2 id="具体内容-10"><a href="#具体内容-10" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、总体均值的估计"><a href="#一、总体均值的估计" class="headerlink" title="一、总体均值的估计"></a>一、总体均值的估计</h3><p><img src="https://img-blog.csdnimg.cn/20200404114345697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>通过上图可以看出，一个好的样本的均值总是和总体的均值大致相当，因此我们可以用样本的均值$\overline X$来表示总体均值的点估计量。<br><img src="https://img-blog.csdnimg.cn/20200404114324949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200404115234637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二、总体方差的估计"><a href="#二、总体方差的估计" class="headerlink" title="二、总体方差的估计"></a>二、总体方差的估计</h3><p><img src="https://img-blog.csdnimg.cn/20200404115302471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>如上图所示，样本的方差一般要比总体的方差小一些，因此我们需要修改样本数据的方差公式来估计总体方差。<br><img src="https://img-blog.csdnimg.cn/20200404115424161.png" alt><br><b>值得注意的是，在拥有总体所有数据来求总体方差确切值时，我们用的公式为如下</b><br><img src="https://img-blog.csdnimg.cn/20200404115845625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200404115910982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="三、比例的抽样分布"><a href="#三、比例的抽样分布" class="headerlink" title="三、比例的抽样分布"></a>三、比例的抽样分布</h3><p><img src="https://img-blog.csdnimg.cn/2020040412004973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200404120008379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="1、比例分布的期望和方差"><a href="#1、比例分布的期望和方差" class="headerlink" title="1、比例分布的期望和方差"></a>1、比例分布的期望和方差</h4><p>如果我们已知在总体中红色球占25%，将总体分隔成许多容量为100颗的盒，求一盒糖球中红色球有40颗及以上的概率。【利用总体求样本】<br>一盒容量为100颗，这说明样本大小n为100，用随机变量X代表样本中的红色糖球的数目，则X~B(n,p)，其中n=100，p=0.25。设样本中的红色糖球比例$P_s$为一个随机变量，且$P_s=X/n$。<br>那么我们此时便得到了比例的概率分布。此时通过推导得到其对应的期望和方差。<img src="https://img-blog.csdnimg.cn/20200404121418979.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200404121512310.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、比例分布的概率计算"><a href="#2、比例分布的概率计算" class="headerlink" title="2、比例分布的概率计算"></a>2、比例分布的概率计算</h4><p>此时我们已经得到比例分布的期望和方差值，那么如何根据这些来计算比例的概率呢。<br>我们发现当n很大时——n&gt;30，$P_s$比例分布近似正态分布，即$P_s \backsim N(p,\frac{pq}{n})$。<br>但需要注意的是，由于总体是离散型的二项分布，因此在用正态分布近似计算时需要连续性修正。<br><img src="https://img-blog.csdnimg.cn/20200404122257255.png" alt><img src="https://img-blog.csdnimg.cn/20200404122214598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/2020040412222912.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="四、均值的抽样分布"><a href="#四、均值的抽样分布" class="headerlink" title="四、均值的抽样分布"></a>四、均值的抽样分布</h3><h5 id="1、均值分布的期望和方差"><a href="#1、均值分布的期望和方差" class="headerlink" title="1、均值分布的期望和方差"></a>1、均值分布的期望和方差</h5><p>如果所有糖球盒总体的均值为10，方差为1，即每一盒糖球数目大致为9~11之间，那么一个样本（30个糖球盒）中，其每盒糖球平均数目小于等于8.5的概率是多少。<br>我们已知盒装糖球的总体的均值和方差，令一个包装盒的糖球数量用X表示，随机选择的每一盒糖球都是X的一个独立观察结果，因此每一袋糖球都符合相同的分布，即如果用$X_i$代表随机选择的一袋糖球的糖球数量，则每个$X_i$的期望都是$\mu$，方差都是$\delta^2$，其中1&lt;=i&lt;=30。那么此时，我们可以用$ \overline X$表示这n袋糖球的容量均值。<br><img src="https://img-blog.csdnimg.cn/20200404131611388.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200404131821585.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、均值分布的概率计算"><a href="#2、均值分布的概率计算" class="headerlink" title="2、均值分布的概率计算"></a>2、均值分布的概率计算</h4><p>同比例分布一样，当n足够大时，我们可以用正态分布来近似代替均值分布，从而计算出其概率。</p>
+<h3 id="五、中心极限定理"><a href="#五、中心极限定理" class="headerlink" title="五、中心极限定理"></a>五、中心极限定理</h3><p><img src="https://img-blog.csdnimg.cn/20200404132152713.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>中心极限定理的应用：<br><img src="https://img-blog.csdnimg.cn/20200404132224852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200404132240366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200404132307226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="十二、置信区间的构建"><a href="#十二、置信区间的构建" class="headerlink" title="十二、置信区间的构建"></a>十二、置信区间的构建</h1><h2 id="前言-11"><a href="#前言-11" class="headerlink" title="前言"></a>前言</h2><p>我们的确可以使用点估计量来估计总体均值、方差或一定比例的精确值，但是我们始终无法确定我们使用的样本一定是无偏样本，因此我们考虑使用置信区间的方法来估计总体统计量，因为它是考虑了不确定性的方法。</p>
+<h2 id="具体内容-11"><a href="#具体内容-11" class="headerlink" title="具体内容"></a>具体内容</h2><p>糖果公司用一个包含100粒糖球的样本得出口味持续时间均值的点估计量为62.7分钟，于是便在电视节目黄金时段宣布其公司糖球口味的平均持续时间为62.7分钟，但有人自行做了测试，得出了不同的结果，威胁要起诉糖果公司。<br>此时，我们应该制定的是总体均值的估计值的区间范围，而不是一个精确值，因为这样的话会给予我们更大的误差空间，就不容易被人起诉了。</p>
+<h3 id="一、置信区间的求解-——-总体正态、样本正态"><a href="#一、置信区间的求解-——-总体正态、样本正态" class="headerlink" title="一、置信区间的求解 —— 总体正态、样本正态"></a>一、置信区间的求解 —— 总体正态、样本正态</h3><h4 id="1、选择总体统计量"><a href="#1、选择总体统计量" class="headerlink" title="1、选择总体统计量"></a>1、选择总体统计量</h4><p>在问题中，需要为糖球口味持续时间的均值来构建区间，于是需要为总体均值$\mu$来构建一个置信区间。</p>
+<h4 id="2、求出其抽样分布"><a href="#2、求出其抽样分布" class="headerlink" title="2、求出其抽样分布"></a>2、求出其抽样分布</h4><p>为了求出总体均值的抽样分布，我们需要先计算出$\overline X$的期望、方差和分布。而这些在上一节中已经计算过了。<img src="https://img-blog.csdnimg.cn/20200406105935433.png" alt><br>此时一个问题是我们现在并不知道总体的方差是多少，但是我们可以借用点估计法$\hat{\mu}$ 或 $s^2$ 来近似替代，因为这已经是我们目前所具有的数据中可以得到的最近似的值了。公式进一步推导成如下形式。<img src="https://img-blog.csdnimg.cn/20200406110833229.png" alt><br>对于样本均值的分布，我们可以根据”若X符合正态分布，那么$\overline X$也符合正态分布”的定理来得知，其应符合正态分布。在本题中即是$\overline X \thicksim N(\mu,\frac{s^2}{n})$。</p>
+<h4 id="3、决定置信水平"><a href="#3、决定置信水平" class="headerlink" title="3、决定置信水平"></a>3、决定置信水平</h4><p>置信水平表明你希望自己对于“总体统计量落入置信区间”的这一说法有多大的把握，比如我们希望总体均值的执行水平为95%，这表明总体均值处于置信区间的概率为0.95，当然可以更高如99%，这样糖果公司就可以更有信心在广告宣称“总体均值位于这个置信区间”这一说法。<br>值得注意的是，置信水平越高，区间越宽，也就是确定的概率越大，范围越广，也越对说法有把握。<br>为了防止说法几乎毫无意义，我们需要确定一个合适的置信水平，确保范围小而可靠，对此，我们一般采用95%作为常用置信水平。<img src="https://img-blog.csdnimg.cn/20200406112541519.png" alt></p>
+<h4 id="4、求出置信上下限"><a href="#4、求出置信上下限" class="headerlink" title="4、求出置信上下限"></a>4、求出置信上下限</h4><p>根据抽样分布和选择好的置信水平来求出置信上下限，从而确定置信区间的范围。<img src="https://img-blog.csdnimg.cn/20200406112615938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>此时我们再将$\overline X$进行标准化，从而利用正态分布表来查出其对应的区间值。<br><img src="https://img-blog.csdnimg.cn/2020040611281747.png" alt><br>此时我们将括号里面的不等式进行展开，即可确定置信区间范围，其中$\overline X$可以通过样本$\overline x$来计算。<br><img src="https://img-blog.csdnimg.cn/20200406112847815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>得出最后结果。<br><img src="https://img-blog.csdnimg.cn/20200406113142264.png" alt></p>
+<h3 id="二、置信区间的简便算法"><a href="#二、置信区间的简便算法" class="headerlink" title="二、置信区间的简便算法"></a>二、置信区间的简便算法</h3><h4 id="1、统计量的抽样分布符合正态分布时"><a href="#1、统计量的抽样分布符合正态分布时" class="headerlink" title="1、统计量的抽样分布符合正态分布时"></a>1、统计量的抽样分布符合正态分布时</h4><p><img src="https://img-blog.csdnimg.cn/20200406113509823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200406113536227.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、统计量的抽样分布符合T分布时"><a href="#2、统计量的抽样分布符合T分布时" class="headerlink" title="2、统计量的抽样分布符合T分布时"></a>2、统计量的抽样分布符合T分布时</h4><p><img src="https://img-blog.csdnimg.cn/20200409100957514.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="三、特殊情况-——-总体正态、样本T分布"><a href="#三、特殊情况-——-总体正态、样本T分布" class="headerlink" title="三、特殊情况 —— 总体正态、样本T分布"></a>三、特殊情况 —— 总体正态、样本T分布</h3><p>糖果公司想求出糖球重量的置信区间，但只抽取了少量的样本，比如抽取了一个具有代表性的样本，共10颗，然后称了每一粒糖球的重量，计算出这个样本的$\overline X$=0.5，$s^2$=0.09，此时该如何求出其置信区间。</p>
+<h4 id="1、选择总体统计量-1"><a href="#1、选择总体统计量-1" class="headerlink" title="1、选择总体统计量"></a>1、选择总体统计量</h4><p>我们需要为糖球重量均值构建一个置信区间，也就是要为总体均值$\mu$构建置信区间。</p>
+<h4 id="2、求-overline-X-的概率分布"><a href="#2、求-overline-X-的概率分布" class="headerlink" title="2、求$\overline X$的概率分布"></a>2、求$\overline X$的概率分布</h4><p>当总体符合正态分布，$\delta^2$未知，且可供支配的样本很小时，$\overline X$符合T分布。而当样本数量为n个时，T分布的形式为$T\thicksim t(n-1)$，而$T=\frac{\overline X - u}{s/\sqrt{n}}$，也就是说在这道题中$T=\frac{\overline X - u}{s/\sqrt{n}} \thicksim t(9)$。<img src="https://img-blog.csdnimg.cn/20200409100052529.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="3、决定置信水平-1"><a href="#3、决定置信水平-1" class="headerlink" title="3、决定置信水平"></a>3、决定置信水平</h4><p>一般设置为95%。</p>
+<h4 id="4、求出-mu-的置信上下限"><a href="#4、求出-mu-的置信上下限" class="headerlink" title="4、求出$\mu$的置信上下限"></a>4、求出$\mu$的置信上下限</h4><p><img src="https://img-blog.csdnimg.cn/2020040910053121.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>再利用T分布概率表可求出$P(T&gt;t)=p$中的t值，在这道题中p=0.025。<br><img src="https://img-blog.csdnimg.cn/20200409100735753.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="十三、假设检验的运用"><a href="#十三、假设检验的运用" class="headerlink" title="十三、假设检验的运用"></a>十三、假设检验的运用</h1><h2 id="前言-12"><a href="#前言-12" class="headerlink" title="前言"></a>前言</h2><p>利用样本检验各种统计断言是否可能属实，通过假设检验可以权衡证据，检验极限结果，判断断言的产生是纯属巧合还是存在其他内在根据，从而可以更加客观得看出事物的本质。</p>
+<h2 id="具体内容-12"><a href="#具体内容-12" class="headerlink" title="具体内容"></a>具体内容</h2><p>某公司出品一种号称两周治愈90%的打鼾患者的药品，但某医生通过15个样本的统计发现其效力并没有达到这种程度，此时到底是谁的结论是正确的，医生可能抽取的样本存在偏倚。</p>
+<h3 id="一、假设检验的步骤"><a href="#一、假设检验的步骤" class="headerlink" title="一、假设检验的步骤"></a>一、假设检验的步骤</h3><h4 id="1、确定假设"><a href="#1、确定假设" class="headerlink" title="1、确定假设"></a>1、确定假设</h4><p>设置认同的原假设$H_0$：该药品能在两周内治愈90%的患者，即$H_0:p=0.9$。<br>设置与原假设对立的备择假设$H_1$：该药品在两周内只能治愈低于90%的患者，即$H_1:p&lt;0.9$。</p>
+<h4 id="2、选择检验统计量"><a href="#2、选择检验统计量" class="headerlink" title="2、选择检验统计量"></a>2、选择检验统计量</h4><p>如果用X表示样本人数，就可以将X作为检验统计量。样本中共有15名患者，而根据只要公司的说法，成功概率为0.9，因此可推出X符合二项分布，即$X \sim B(15,0.9)$。     </p>
+<h4 id="3、确定拒绝域"><a href="#3、确定拒绝域" class="headerlink" title="3、确定拒绝域"></a>3、确定拒绝域</h4><p>如果鼻鼾患者的治愈人数位于拒绝域内，我们就说有足够的证据可以反驳原假设；如果鼻鼾患者的治愈人数位于拒绝域之外，我就承认没有足够的证据可以反驳原假设，并接受原假设的断言，其中拒绝域的分界点，我们称作临界值c。    <img src="https://img-blog.csdnimg.cn/20200418112344977.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>而为了求出假设检验的拒绝域或临界值c，我们需要先定下显著性水平$\alpha$，它的值代表着希望在样本结果的不可能程度达到多大时就拒绝原假设$H_0$。比如假设我们以5%作为显著性水平检验制药公司的断言，这说明我们选取的拒绝域应使得“鼻鼾患者治愈人数小于c”的概率小于0.05，即概率分布最低端的5%部分。<img src="https://img-blog.csdnimg.cn/2020041811273250.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="4、求出P值"><a href="#4、求出P值" class="headerlink" title="4、求出P值"></a>4、求出P值</h4><p>利用样本进行P值的计算，根据其结果来判定样本结果是否落在假设检验的拒绝域以内，也就是说根据P值来确定是否该拒绝原假设。比如医生抽样的15名样本中只有11个痊愈，这时我们应该求 $P(X \leq 11)$的值。</p>
+<h4 id="5、判断样本结果是否位于拒绝域中"><a href="#5、判断样本结果是否位于拒绝域中" class="headerlink" title="5、判断样本结果是否位于拒绝域中"></a>5、判断样本结果是否位于拒绝域中</h4><p>当显著性水平为5%时，若 $P(X \leq 11)&lt;0.05$的话，表示数值11落在拒绝域中，这时我们可以拒绝原假设。<img src="https://img-blog.csdnimg.cn/20200418114651293.png" alt></p>
+<h4 id="6、作出决策"><a href="#6、作出决策" class="headerlink" title="6、作出决策"></a>6、作出决策</h4><p><img src="https://img-blog.csdnimg.cn/20200418115145311.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>值得指出的是，在研究实际拥有的证据之前，必须根据所需要的证据水平决定所需要的检验水平。因为如果先看证据是否充分再确定检验水平，这会摄入主观的因素来选定特定的检验级别，导致检验结果发生偏倚，从而做出错误决策。</p>
+<h3 id="二、假设检验计算的进阶"><a href="#二、假设检验计算的进阶" class="headerlink" title="二、假设检验计算的进阶"></a>二、假设检验计算的进阶</h3><p>学会近似分布的选择并随后使用该近似分布来计算，从而减少计算量。比如当样本量达到100名后，考虑用正态分布来近似二项分布，如$\frac{X-90}{3}\sim N(0,1) \iff X\sim N(90,9) \iff X\sim B(100,0.9)$。<br><img src="https://img-blog.csdnimg.cn/2020041811582449.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200418115834715.png" alt><img src="https://img-blog.csdnimg.cn/20200418115859373.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200418115919571.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="三、第一类错误"><a href="#三、第一类错误" class="headerlink" title="三、第一类错误"></a>三、第一类错误</h3><p>第一类错误即在原假设实际为正确的情况下拒绝原假设的后果。如果发生第一类错误，那么一定是拒绝了原假设，而拒绝原假设的前提是样本结果必须位于拒绝域之内，因此$P(发生第一类错误)=\alpha$。<img src="https://img-blog.csdnimg.cn/2020041812033856.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="四、第二类错误"><a href="#四、第二类错误" class="headerlink" title="四、第二类错误"></a>四、第二类错误</h3><p>第二类错误是当原假设实际为错误假设时反而接受了它的后果，其$P(发生第二类错误)=\beta$，其中参数的计算方法如下。 <img src="https://img-blog.csdnimg.cn/20200418120625910.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>在计算第二类错误的概率时需要先满足一个必要条件——备择假设具有唯一特定值。比如我们的假设应该为<br><img src="https://img-blog.csdnimg.cn/20200418121055192.png" alt><img src="https://img-blog.csdnimg.cn/20200418121329879.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200418121350600.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="五、假设检验的功效"><a href="#五、假设检验的功效" class="headerlink" title="五、假设检验的功效"></a>五、假设检验的功效</h3><p><img src="https://img-blog.csdnimg.cn/20200418122158501.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="六、实例"><a href="#六、实例" class="headerlink" title="六、实例"></a>六、实例</h3><p><img src="https://img-blog.csdnimg.cn/20200418141556762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200418141615216.png" alt><img src="https://img-blog.csdnimg.cn/20200418141629323.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="十四、卡方分布"><a href="#十四、卡方分布" class="headerlink" title="十四、卡方分布"></a>十四、卡方分布</h1><h2 id="前言-13"><a href="#前言-13" class="headerlink" title="前言"></a>前言</h2><p>有时候事实与期望并不相符，那么当它发生时我们可以通过卡方分布来判断这些偏差是正常波动，还是说明概率模型存在问题。</p>
+<h2 id="具体内容-13"><a href="#具体内容-13" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、-chi-2-分布的性质"><a href="#一、-chi-2-分布的性质" class="headerlink" title="一、$\chi ^2$分布的性质"></a>一、$\chi ^2$分布的性质</h3><p><img src="https://img-blog.csdnimg.cn/20200421133821863.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二、用-chi-2-分布检验评估差异"><a href="#二、用-chi-2-分布检验评估差异" class="headerlink" title="二、用$\chi ^2$分布检验评估差异"></a>二、用$\chi ^2$分布检验评估差异</h3><p>肥蛋赌场有一大堆亮闪闪的老虎机，但现在的问题是人们不仅赌个不停也赢个不停，发现事实和期望中奖概率似乎有很大的出入，现在怀疑老虎机被人动了手脚，请判断事实和期望是否近似吻合。</p>
+<h4 id="1、初始数据"><a href="#1、初始数据" class="headerlink" title="1、初始数据"></a>1、初始数据</h4><p><img src="https://img-blog.csdnimg.cn/20200421134812595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、计算步骤"><a href="#2、计算步骤" class="headerlink" title="2、计算步骤"></a>2、计算步骤</h4><p>1、首先利用观测频数和期望频数来计算检验统计量，其中期望频数可以用总数和期望概率计算出来。<br><img src="https://img-blog.csdnimg.cn/20200421134128548.png" alt><img src="https://img-blog.csdnimg.cn/2020042113484544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br>2、利用之前计算出来的检验统计量值来进行假设检验。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200421134943707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200421135243200.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="3、知识进阶"><a href="#3、知识进阶" class="headerlink" title="3、知识进阶"></a>3、知识进阶</h4><p>我们可以得知用卡方分布可以对相当多的概率分布进行优度检验，只要我们得到一组观察频数并能算出其期望频数，那么就可以用卡方分布检验任何概率分布的拟合优度，不过在这里面最大的困难在于自由度v的计算。下面是最常见的概率分布的卡方自由度的计算公式。<img src="https://img-blog.csdnimg.cn/20200421135714607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="三、用-chi-2-分布检验独立性"><a href="#三、用-chi-2-分布检验独立性" class="headerlink" title="三、用$\chi ^2$分布检验独立性"></a>三、用$\chi ^2$分布检验独立性</h3><p>步骤与检验优度基本一致。</p>
+<h4 id="1、初始数据-1"><a href="#1、初始数据-1" class="headerlink" title="1、初始数据"></a>1、初始数据</h4><p><img src="https://img-blog.csdnimg.cn/20200421140102392.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、计算步骤-1"><a href="#2、计算步骤-1" class="headerlink" title="2、计算步骤"></a>2、计算步骤</h4><p><img src="https://img-blog.csdnimg.cn/20200421135828758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/2020042113584248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="3、自由度的计算方法"><a href="#3、自由度的计算方法" class="headerlink" title="3、自由度的计算方法"></a>3、自由度的计算方法</h4><p><img src="https://img-blog.csdnimg.cn/20200421140025598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200421140153395.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="十五、相关与回归"><a href="#十五、相关与回归" class="headerlink" title="十五、相关与回归"></a>十五、相关与回归</h1><h2 id="前言-14"><a href="#前言-14" class="headerlink" title="前言"></a>前言</h2><p>前面所讲的统计量只描述一个变量，如个人身高等，在这里我们将学习一些用于说明变量之间关系的统计量，了解它将使我们了解事物的相互关系，了解真相。</p>
+<h2 id="具体内容-14"><a href="#具体内容-14" class="headerlink" title="具体内容"></a>具体内容</h2><h3 id="一、善用散点图指出数据模式"><a href="#一、善用散点图指出数据模式" class="headerlink" title="一、善用散点图指出数据模式"></a>一、善用散点图指出数据模式</h3><p>通过将数据图形化，可以很清晰得分析出其是拟合哪种曲线。<br><img src="https://img-blog.csdnimg.cn/20200421144421515.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="二、图形的诠释误区"><a href="#二、图形的诠释误区" class="headerlink" title="二、图形的诠释误区"></a>二、图形的诠释误区</h3><p>呈正相关的曲线，并不表明自变量x与因变量y之间是因果关系，因为它们只是刚好被相同的因素驱动的，因此呈现出二者都同时增加。<br><img src="https://img-blog.csdnimg.cn/20200421144529205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="三、最佳拟合线y-ax-b的参数计算"><a href="#三、最佳拟合线y-ax-b的参数计算" class="headerlink" title="三、最佳拟合线y=ax+b的参数计算"></a>三、最佳拟合线y=ax+b的参数计算</h3><h4 id="1、参数b的计算"><a href="#1、参数b的计算" class="headerlink" title="1、参数b的计算"></a>1、参数b的计算</h4><p><img src="https://img-blog.csdnimg.cn/2020042114474384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br><img src="https://img-blog.csdnimg.cn/20200421144916564.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200421144937759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2、参数a的计算"><a href="#2、参数a的计算" class="headerlink" title="2、参数a的计算"></a>2、参数a的计算</h4><p><img src="https://img-blog.csdnimg.cn/20200421144820157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="四、用相关系数量度直线与数据的拟合度"><a href="#四、用相关系数量度直线与数据的拟合度" class="headerlink" title="四、用相关系数量度直线与数据的拟合度"></a>四、用相关系数量度直线与数据的拟合度</h3><p>相关系数r是介于-1和1之间的一个数，描述了各个数据点与直线的偏离程度，因此可以通过它来量度回归线与数据的拟合度。当r=-1，则数据为完全负线性相关，所有数据点都在一条直线上，如果r等于1，则数据完全正线性相关，如果等于0，则不存在相关性。<br><img src="https://img-blog.csdnimg.cn/20200421145101195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br><img src="https://img-blog.csdnimg.cn/20200421145213839.png" alt><br><img src="https://img-blog.csdnimg.cn/20200421145223617.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><br><img src="https://img-blog.csdnimg.cn/20200421145251222.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt><img src="https://img-blog.csdnimg.cn/20200421145258932.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMDQ3MTEx,size_16,color_FFFFFF,t_70" alt></p>
+
+            </div>
+            <hr />
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">写作不易，客官能否打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《《深入浅出统计学》总结》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/26/shen-ru-qian-chu-tong-ji-xue-zong-jie/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                兴明
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '20a71f68d33d6926d0f9',
+        clientSecret: 'b6b0fb2bd17e508bd69d074cd6bc269025eab473',
+        repo: 'superman0010.github.io',
+        owner: 'superman0010',
+        admin: "superman0010",
+        id: '2020/03/26/shen-ru-qian-chu-tong-ji-xue-zong-jie/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+    <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '查教程获取',
+        appKey: '查教程获取',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'false' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/04/02/ying-yu-kou-yu-fa-yin-ji-qiao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="英语口语发音技巧">
+                        
+                        <span class="card-title">英语口语发音技巧</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            参考资料：百度文库的《英语发音中的失音、连读、浊化、弱化、英音和美音的差异、节奏6个问题解析》一、发音基础1、紧音大集合/i/：张嘴露齿，左右极致，高音调/ɛ/: 张嘴露齿，左右半极致，半高音调/æ/: 张嘴露齿，左右半极致，下拉极致，高音
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/英语/" class="post-category" target="_blank">
+                                    英语
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/英语会话/" target="_blank">
+                        <span class="chip bg-color">英语会话</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/19/ji-jin-tou-zi-ru-men-yu-shi-zhan-ji-qiao-zong-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="《基金投资入门与实战技巧》总结">
+                        
+                        <span class="card-title">《基金投资入门与实战技巧》总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            参考资料：罗斌的《基金投资入门与实战技巧》
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/金融/" class="post-category" target="_blank">
+                                    金融
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/启蒙/" target="_blank">
+                        <span class="chip bg-color">启蒙</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 兴明的博客<br />'
+            + '作者: 兴明<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+<script>
+		/*
+    const btw = new BTWPlugin();
+    btw.init({
+        id: 'artDetail',
+        blogId: '20962-1585405055583-879',
+        name: '算法码上来',
+        qrcode: 'https://godweiyang.com/medias/gzh.jpg',
+        keyword: 'VIP',
+    });
+   */
+</script>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy; 2021-2021 XingMing. 版权所有
+
+            
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">96.6k</span>
+            
+
+            <br>
+            <span id="sitetime"></span>
+
+            
+            
+            <br>
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-heart-o"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+            </span>
+            
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/superman0010" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:muyes88@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+<!--
+
+
+
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=1320563812&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+-->
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 0;
+        var uvcountOffset = 0;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2021, 05, 08, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=查教程获取"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '查教程获取');
+</script>
+
+
+
+    
+    <script src="/libs/others/clicklove.js"></script>
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+</body>
+
+</html>

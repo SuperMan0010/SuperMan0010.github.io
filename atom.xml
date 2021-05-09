@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://so-peace.com/"/>
-  <updated>2021-05-05T13:35:48.310Z</updated>
+  <updated>2021-05-09T13:45:57.405Z</updated>
   <id>https://so-peace.com/</id>
   
   <author>
@@ -17,25 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://so-peace.com/2021/05/05/test/"/>
-    <id>https://so-peace.com/2021/05/05/test/</id>
-    <published>2021-05-05T13:35:48.000Z</published>
-    <updated>2021-05-05T13:35:48.310Z</updated>
+    <title>《统计学习方法》总结</title>
+    <link href="https://so-peace.com/2021/01/25/tong-ji-xue-xi-fang-fa-zong-jie/"/>
+    <id>https://so-peace.com/2021/01/25/tong-ji-xue-xi-fang-fa-zong-jie/</id>
+    <published>2021-01-25T07:57:25.000Z</published>
+    <updated>2021-05-09T13:45:57.405Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考资料：李航的《统计学习方法》第二版&quot;&gt;&lt;a href=&quot;#参考资料：李航的《统计学习方法》第二版&quot; class=&quot;headerlink&quot; title=&quot;参考资料：李航的《统计学习方法》第二版&quot;&gt;&lt;/a&gt;参考资料：李航的《统计学习方法》第二版&lt;/h1&gt;&lt;h3
+        
+      
+    
     </summary>
     
+      <category term="算法" scheme="https://so-peace.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="统计学习方法" scheme="https://so-peace.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://so-peace.com/2021/05/05/hello-world/"/>
-    <id>https://so-peace.com/2021/05/05/hello-world/</id>
-    <published>2021-05-05T12:58:40.161Z</published>
-    <updated>2021-05-05T12:58:40.161Z</updated>
+    <title>特征工程概述</title>
+    <link href="https://so-peace.com/2021/01/25/te-zheng-gong-cheng-gai-shu/"/>
+    <id>https://so-peace.com/2021/01/25/te-zheng-gong-cheng-gai-shu/</id>
+    <published>2021-01-25T07:57:25.000Z</published>
+    <updated>2021-05-09T13:43:54.719Z</updated>
     
     <summary type="html">
     
@@ -43,21 +55,25 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h1 id=&quot;一、特征工程-主篇&quot;&gt;&lt;a href=&quot;#一、特征工程-主篇&quot; class=&quot;headerlink&quot; title=&quot;一、特征工程-主篇&quot;&gt;&lt;/a&gt;一、特征工程-主篇&lt;/h1&gt;&lt;p&gt;注：缺失值处理应在特征编码之前，因为部分编码方法无法处理缺失值。&lt;br&gt;&lt;img
         
       
     
     </summary>
     
+      <category term="特征工程" scheme="https://so-peace.com/categories/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="特征工程概述" scheme="https://so-peace.com/tags/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%BF%B0/"/>
     
   </entry>
   
   <entry>
-    <title>5W2H | 关于写博客的七点反思</title>
-    <link href="https://so-peace.com/2020/01/14/5w2h-godweiyang/"/>
-    <id>https://so-peace.com/2020/01/14/5w2h-godweiyang/</id>
-    <published>2020-01-14T07:27:31.000Z</published>
-    <updated>2021-05-08T12:02:59.707Z</updated>
+    <title>关于XGBoost模型组成的简单探究</title>
+    <link href="https://so-peace.com/2020/10/20/guan-yu-xgboost-mo-xing-zu-cheng-de-jian-dan-tan-jiu/"/>
+    <id>https://so-peace.com/2020/10/20/guan-yu-xgboost-mo-xing-zu-cheng-de-jian-dan-tan-jiu/</id>
+    <published>2020-10-20T09:59:20.000Z</published>
+    <updated>2021-05-09T13:55:28.995Z</updated>
     
     <summary type="html">
     
@@ -65,16 +81,464 @@
       
         
         
-          &lt;h2 id=&quot;When？什么时候开始写的？&quot;&gt;&lt;a href=&quot;#When？什么时候开始写的？&quot; class=&quot;headerlink&quot; title=&quot;When？什么时候开始写的？&quot;&gt;&lt;/a&gt;When？什么时候开始写的？&lt;/h2&gt;&lt;p&gt;第一次写博客是 2015 年了，在
+          &lt;h1 id=&quot;参考资料：陈天奇的《XGBoost：A-scalable-Tree-Boosting-System》&quot;&gt;&lt;a href=&quot;#参考资料：陈天奇的《XGBoost：A-scalable-Tree-Boosting-System》&quot;
         
       
     
     </summary>
     
-      <category term="随笔" scheme="https://so-peace.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="算法" scheme="https://so-peace.com/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="博客" scheme="https://so-peace.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="模型" scheme="https://so-peace.com/tags/%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>区间估计与假设检验的原理及其共同点</title>
+    <link href="https://so-peace.com/2020/10/20/qu-jian-gu-ji-yu-jia-she-jian-yan-de-yuan-li-ji-qi-gong-tong-dian/"/>
+    <id>https://so-peace.com/2020/10/20/qu-jian-gu-ji-yu-jia-she-jian-yan-de-yuan-li-ji-qi-gong-tong-dian/</id>
+    <published>2020-10-20T09:54:51.000Z</published>
+    <updated>2021-05-09T13:55:12.990Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="数学" scheme="https://so-peace.com/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="区间估计" scheme="https://so-peace.com/tags/%E5%8C%BA%E9%97%B4%E4%BC%B0%E8%AE%A1/"/>
+    
+      <category term="假设检验" scheme="https://so-peace.com/tags/%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性回归的损失函数和梯度下降之间的概述</title>
+    <link href="https://so-peace.com/2020/10/20/xian-xing-hui-gui-de-sun-shi-han-shu-he-ti-du-xia-jiang-zhi-jian-de-gai-shu/"/>
+    <id>https://so-peace.com/2020/10/20/xian-xing-hui-gui-de-sun-shi-han-shu-he-ti-du-xia-jiang-zhi-jian-de-gai-shu/</id>
+    <published>2020-10-20T09:53:10.000Z</published>
+    <updated>2021-05-09T13:51:05.155Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://so-peace.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="梯度下降" scheme="https://so-peace.com/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于特征筛选中F分布和卡方分布的运用</title>
+    <link href="https://so-peace.com/2020/10/20/guan-yu-te-zheng-shai-xuan-zhong-f-fen-bu-he-qia-fang-fen-bu-de-yun-yong/"/>
+    <id>https://so-peace.com/2020/10/20/guan-yu-te-zheng-shai-xuan-zhong-f-fen-bu-he-qia-fang-fen-bu-de-yun-yong/</id>
+    <published>2020-10-20T09:52:05.000Z</published>
+    <updated>2021-05-09T13:52:49.300Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="特征工程" scheme="https://so-peace.com/categories/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="特征筛选" scheme="https://so-peace.com/tags/%E7%89%B9%E5%BE%81%E7%AD%9B%E9%80%89/"/>
+    
+      <category term="F分布" scheme="https://so-peace.com/tags/F%E5%88%86%E5%B8%83/"/>
+    
+      <category term="卡方分布" scheme="https://so-peace.com/tags/%E5%8D%A1%E6%96%B9%E5%88%86%E5%B8%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SVM基本数学模型求解过程——线性、非线性和核函数</title>
+    <link href="https://so-peace.com/2020/10/20/svm-ji-ben-shu-xue-mo-xing-qiu-jie-guo-cheng-xian-xing-fei-xian-xing-he-he-han-shu/"/>
+    <id>https://so-peace.com/2020/10/20/svm-ji-ben-shu-xue-mo-xing-qiu-jie-guo-cheng-xian-xing-fei-xian-xing-he-he-han-shu/</id>
+    <published>2020-10-20T09:45:36.000Z</published>
+    <updated>2021-05-09T13:54:23.926Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://so-peace.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="SVM" scheme="https://so-peace.com/tags/SVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于PCA降维的特征值分解与奇异值分解的比较</title>
+    <link href="https://so-peace.com/2020/10/20/ji-yu-pca-jiang-wei-de-te-zheng-zhi-fen-jie-yu-qi-yi-zhi-fen-jie-de-bi-jiao/"/>
+    <id>https://so-peace.com/2020/10/20/ji-yu-pca-jiang-wei-de-te-zheng-zhi-fen-jie-yu-qi-yi-zhi-fen-jie-de-bi-jiao/</id>
+    <published>2020-10-20T09:36:23.000Z</published>
+    <updated>2021-05-09T13:40:06.172Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://so-peace.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="模型" scheme="https://so-peace.com/tags/%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习常用九大算法</title>
+    <link href="https://so-peace.com/2020/07/17/ji-qi-xue-xi-chang-yong-jiu-da-suan-fa/"/>
+    <id>https://so-peace.com/2020/07/17/ji-qi-xue-xi-chang-yong-jiu-da-suan-fa/</id>
+    <published>2020-07-17T04:08:35.000Z</published>
+    <updated>2021-05-09T13:34:13.441Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考资料：极客时间的《数据分析实战45讲》&quot;&gt;&lt;a href=&quot;#参考资料：极客时间的《数据分析实战45讲》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://so-peace.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="模型" scheme="https://so-peace.com/tags/%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用Python进行数据分析及思维导图</title>
+    <link href="https://so-peace.com/2020/06/25/li-yong-python-jin-xing-shu-ju-fen-xi-ji-si-wei-dao-tu/"/>
+    <id>https://so-peace.com/2020/06/25/li-yong-python-jin-xing-shu-ju-fen-xi-ji-si-wei-dao-tu/</id>
+    <published>2020-06-25T12:37:43.000Z</published>
+    <updated>2021-05-09T13:37:18.552Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考资料：机械工业出版社的《利用Python进行数据分析》（思维导图在最后面）&quot;&gt;&lt;a href=&quot;#参考资料：机械工业出版社的《利用Python进行数据分析》（思维导图在最后面）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编程语言" scheme="https://so-peace.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="Python" scheme="https://so-peace.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>零基础英语语法</title>
+    <link href="https://so-peace.com/2020/04/12/ling-ji-chu-ying-yu-yu-fa/"/>
+    <id>https://so-peace.com/2020/04/12/ling-ji-chu-ying-yu-yu-fa/</id>
+    <published>2020-04-12T02:07:57.000Z</published>
+    <updated>2021-05-09T12:52:07.501Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考资料：《零基础英语语法》&quot;&gt;&lt;a href=&quot;#参考资料：《零基础英语语法》&quot; class=&quot;headerlink&quot; title=&quot;参考资料：《零基础英语语法》&quot;&gt;&lt;/a&gt;参考资料：《零基础英语语法》&lt;/h1&gt;&lt;h1 id=&quot;一、词法篇&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="英语" scheme="https://so-peace.com/categories/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+      <category term="英语写作" scheme="https://so-peace.com/tags/%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语口语发音技巧</title>
+    <link href="https://so-peace.com/2020/04/02/ying-yu-kou-yu-fa-yin-ji-qiao/"/>
+    <id>https://so-peace.com/2020/04/02/ying-yu-kou-yu-fa-yin-ji-qiao/</id>
+    <published>2020-04-02T14:27:25.000Z</published>
+    <updated>2021-05-09T12:49:55.808Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考资料：百度文库的《英语发音中的失音、连读、浊化、弱化、英音和美音的差异、节奏6个问题解析》&quot;&gt;&lt;a href=&quot;#参考资料：百度文库的《英语发音中的失音、连读、浊化、弱化、英音和美音的差异、节奏6个问题解析》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="英语" scheme="https://so-peace.com/categories/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+      <category term="英语会话" scheme="https://so-peace.com/tags/%E8%8B%B1%E8%AF%AD%E4%BC%9A%E8%AF%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《深入浅出统计学》总结</title>
+    <link href="https://so-peace.com/2020/03/26/shen-ru-qian-chu-tong-ji-xue-zong-jie/"/>
+    <id>https://so-peace.com/2020/03/26/shen-ru-qian-chu-tong-ji-xue-zong-jie/</id>
+    <published>2020-03-26T15:48:19.000Z</published>
+    <updated>2021-05-09T13:28:33.129Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考资料：电子工业出版社的《深入浅出统计学》&quot;&gt;&lt;a href=&quot;#参考资料：电子工业出版社的《深入浅出统计学》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数学" scheme="https://so-peace.com/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="统计学" scheme="https://so-peace.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《基金投资入门与实战技巧》总结</title>
+    <link href="https://so-peace.com/2020/03/19/ji-jin-tou-zi-ru-men-yu-shi-zhan-ji-qiao-zong-jie/"/>
+    <id>https://so-peace.com/2020/03/19/ji-jin-tou-zi-ru-men-yu-shi-zhan-ji-qiao-zong-jie/</id>
+    <published>2020-03-19T15:08:59.000Z</published>
+    <updated>2021-05-09T13:01:32.723Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考资料：罗斌的《基金投资入门与实战技巧》&quot;&gt;&lt;a href=&quot;#参考资料：罗斌的《基金投资入门与实战技巧》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="金融" scheme="https://so-peace.com/categories/%E9%87%91%E8%9E%8D/"/>
+    
+    
+      <category term="启蒙" scheme="https://so-peace.com/tags/%E5%90%AF%E8%92%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日英基本会话对照</title>
+    <link href="https://so-peace.com/2020/03/11/ri-ying-ji-ben-hui-hua-dui-zhao/"/>
+    <id>https://so-peace.com/2020/03/11/ri-ying-ji-ben-hui-hua-dui-zhao/</id>
+    <published>2020-03-11T04:12:48.000Z</published>
+    <updated>2021-05-09T12:45:32.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;参考资料：油管的视频《Real-Japanese-Phrases-for-Speaking》&quot;&gt;&lt;a href=&quot;#参考资料：油管的视频《Real-Japanese-Phrases-for-Speaking》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="日语" scheme="https://so-peace.com/categories/%E6%97%A5%E8%AF%AD/"/>
+    
+    
+      <category term="日语会话" scheme="https://so-peace.com/tags/%E6%97%A5%E8%AF%AD%E4%BC%9A%E8%AF%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日本文化常识之历史篇</title>
+    <link href="https://so-peace.com/2020/03/08/ri-ben-wen-hua-chang-shi-zhi-li-shi-pian/"/>
+    <id>https://so-peace.com/2020/03/08/ri-ben-wen-hua-chang-shi-zhi-li-shi-pian/</id>
+    <published>2020-03-08T14:48:53.000Z</published>
+    <updated>2021-05-09T12:43:17.822Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;参考资料：华东理工大学出版社的《晨读夜诵-每天读一点日本文化常识大全》&quot;&gt;&lt;a href=&quot;#参考资料：华东理工大学出版社的《晨读夜诵-每天读一点日本文化常识大全》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="日语" scheme="https://so-peace.com/categories/%E6%97%A5%E8%AF%AD/"/>
+    
+    
+      <category term="日语文化" scheme="https://so-peace.com/tags/%E6%97%A5%E8%AF%AD%E6%96%87%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《定投十年财务自由》总结</title>
+    <link href="https://so-peace.com/2020/02/29/ding-tou-shi-nian-cai-wu-zi-you-zong-jie/"/>
+    <id>https://so-peace.com/2020/02/29/ding-tou-shi-nian-cai-wu-zi-you-zong-jie/</id>
+    <published>2020-02-29T14:25:23.000Z</published>
+    <updated>2021-05-09T12:59:25.353Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考书本：银行螺丝钉的《定投十年财务自由》&quot;&gt;&lt;a href=&quot;#参考书本：银行螺丝钉的《定投十年财务自由》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="金融" scheme="https://so-peace.com/categories/%E9%87%91%E8%9E%8D/"/>
+    
+    
+      <category term="启蒙" scheme="https://so-peace.com/tags/%E5%90%AF%E8%92%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编译原理复习总结及思维导图</title>
+    <link href="https://so-peace.com/2020/02/11/bian-yi-yuan-li-fu-xi-zong-jie-ji-si-wei-dao-tu/"/>
+    <id>https://so-peace.com/2020/02/11/bian-yi-yuan-li-fu-xi-zong-jie-ji-si-wei-dao-tu/</id>
+    <published>2020-02-11T15:48:37.000Z</published>
+    <updated>2021-05-09T12:36:55.552Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;文章声明&quot;&gt;&lt;a href=&quot;#文章声明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="计算机基础" scheme="https://so-peace.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="编译原理" scheme="https://so-peace.com/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《一课经济学》—— 只见树木不见森林</title>
+    <link href="https://so-peace.com/2020/01/23/yi-ke-jing-ji-xue-zhi-jian-shu-mu-bu-jian-sen-lin/"/>
+    <id>https://so-peace.com/2020/01/23/yi-ke-jing-ji-xue-zhi-jian-shu-mu-bu-jian-sen-lin/</id>
+    <published>2020-01-23T08:29:20.000Z</published>
+    <updated>2021-05-09T12:59:27.961Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;作者简介&quot;&gt;&lt;a href=&quot;#作者简介&quot; class=&quot;headerlink&quot; title=&quot;作者简介&quot;&gt;&lt;/a&gt;作者简介&lt;/h1&gt;&lt;p&gt;亨利 ‧ 赫兹利特 （Henry Hazlitt, 1894-1993）是美国报界元老，著名的经济专栏作家，被誉为“20
+        
+      
+    
+    </summary>
+    
+      <category term="金融" scheme="https://so-peace.com/categories/%E9%87%91%E8%9E%8D/"/>
+    
+    
+      <category term="启蒙" scheme="https://so-peace.com/tags/%E5%90%AF%E8%92%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《离散数学》总结</title>
+    <link href="https://so-peace.com/2020/01/15/chi-san-shu-xue-zong-jie/"/>
+    <id>https://so-peace.com/2020/01/15/chi-san-shu-xue-zong-jie/</id>
+    <published>2020-01-15T14:23:31.000Z</published>
+    <updated>2021-05-09T13:13:36.044Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;参考书本：高等教育出版社《离散数学》第二版&quot;&gt;&lt;a href=&quot;#参考书本：高等教育出版社《离散数学》第二版&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数学" scheme="https://so-peace.com/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="离散数学" scheme="https://so-peace.com/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
