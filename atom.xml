@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://so-peace.com/"/>
-  <updated>2021-05-09T13:45:57.405Z</updated>
+  <updated>2021-06-14T08:16:25.520Z</updated>
   <id>https://so-peace.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《量化炼金术：中低频量化交易策略研发》总结</title>
+    <link href="https://so-peace.com/2021/06/12/liang-hua-lian-jin-zhu-zhong-di-pin-liang-hua-jiao-yi-ce-lue-yan-fa-zong-jie/"/>
+    <id>https://so-peace.com/2021/06/12/liang-hua-lian-jin-zhu-zhong-di-pin-liang-hua-jiao-yi-ce-lue-yan-fa-zong-jie/</id>
+    <published>2021-06-12T09:23:31.000Z</published>
+    <updated>2021-06-14T08:16:25.520Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;参考资料：机械工业出版社的《量化炼金术：中低频量化交易策略研发》&quot;&gt;&lt;a href=&quot;#参考资料：机械工业出版社的《量化炼金术：中低频量化交易策略研发》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="金融" scheme="https://so-peace.com/categories/%E9%87%91%E8%9E%8D/"/>
+    
+    
+      <category term="量化交易" scheme="https://so-peace.com/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《量化交易——如何建立自己的算法交易事业》总结</title>
+    <link href="https://so-peace.com/2021/05/22/liang-hua-jiao-yi-ru-he-jian-li-zi-ji-de-suan-fa-jiao-yi-shi-ye-zong-jie/"/>
+    <id>https://so-peace.com/2021/05/22/liang-hua-jiao-yi-ru-he-jian-li-zi-ji-de-suan-fa-jiao-yi-shi-ye-zong-jie/</id>
+    <published>2021-05-22T15:08:59.000Z</published>
+    <updated>2021-06-14T08:16:21.757Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;参考资料：东北财经大学出版社的《量化交易——如何建立自己的算法交易事业》&quot;&gt;&lt;a href=&quot;#参考资料：东北财经大学出版社的《量化交易——如何建立自己的算法交易事业》&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="金融" scheme="https://so-peace.com/categories/%E9%87%91%E8%9E%8D/"/>
+    
+    
+      <category term="量化交易" scheme="https://so-peace.com/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/"/>
+    
+  </entry>
   
   <entry>
     <title>《统计学习方法》总结</title>
@@ -279,58 +331,6 @@
     
     
       <category term="Python" scheme="https://so-peace.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《量化炼金术：中低频量化交易策略研发》总结</title>
-    <link href="https://so-peace.com/2020/06/12/liang-hua-lian-jin-zhu-zhong-di-pin-liang-hua-jiao-yi-ce-lue-yan-fa-zong-jie/"/>
-    <id>https://so-peace.com/2020/06/12/liang-hua-lian-jin-zhu-zhong-di-pin-liang-hua-jiao-yi-ce-lue-yan-fa-zong-jie/</id>
-    <published>2020-06-12T09:23:31.000Z</published>
-    <updated>2021-06-14T08:07:05.722Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;参考资料：机械工业出版社的《量化炼金术：中低频量化交易策略研发》&quot;&gt;&lt;a href=&quot;#参考资料：机械工业出版社的《量化炼金术：中低频量化交易策略研发》&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="金融" scheme="https://so-peace.com/categories/%E9%87%91%E8%9E%8D/"/>
-    
-    
-      <category term="量化交易" scheme="https://so-peace.com/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《量化交易——如何建立自己的算法交易事业》总结</title>
-    <link href="https://so-peace.com/2020/05/22/liang-hua-jiao-yi-ru-he-jian-li-zi-ji-de-suan-fa-jiao-yi-shi-ye-zong-jie/"/>
-    <id>https://so-peace.com/2020/05/22/liang-hua-jiao-yi-ru-he-jian-li-zi-ji-de-suan-fa-jiao-yi-shi-ye-zong-jie/</id>
-    <published>2020-05-22T15:08:59.000Z</published>
-    <updated>2021-06-14T08:08:39.621Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;参考资料：东北财经大学出版社的《量化交易——如何建立自己的算法交易事业》&quot;&gt;&lt;a href=&quot;#参考资料：东北财经大学出版社的《量化交易——如何建立自己的算法交易事业》&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="金融" scheme="https://so-peace.com/categories/%E9%87%91%E8%9E%8D/"/>
-    
-    
-      <category term="量化交易" scheme="https://so-peace.com/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/"/>
     
   </entry>
   
