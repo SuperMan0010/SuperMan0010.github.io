@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://so-peace.com/"/>
-  <updated>2021-06-14T08:25:27.370Z</updated>
+  <updated>2021-07-31T14:29:30.625Z</updated>
   <id>https://so-peace.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>其实，我也不知道写什么</title>
+    <link href="https://so-peace.com/2021/07/31/qi-shi-wo-ye-bu-zhi-dao-xie-shi-me/"/>
+    <id>https://so-peace.com/2021/07/31/qi-shi-wo-ye-bu-zhi-dao-xie-shi-me/</id>
+    <published>2021-07-31T13:25:23.000Z</published>
+    <updated>2021-07-31T14:29:30.625Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;如果没记错话，离上次的随笔已经隔了有两个年头了吧，我有点忘了该怎么写，也不知道为何忽然想要写。&lt;/p&gt;
+&lt;p&gt;今天最让人‘惊悚’的事情莫过于想起——昨天跟一个自己喜欢的女孩表白时把理由说成因为她有着我过去前任的影子，当然这种表白结果只有一个嘛（她非常非常冷漠地拒绝了）。现在
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://so-peace.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="情感" scheme="https://so-peace.com/tags/%E6%83%85%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>《量化炼金术：中低频量化交易策略研发》总结</title>
@@ -513,32 +540,6 @@
     
     
       <category term="金融启蒙" scheme="https://so-peace.com/tags/%E9%87%91%E8%9E%8D%E5%90%AF%E8%92%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编译原理复习总结及思维导图</title>
-    <link href="https://so-peace.com/2020/02/11/bian-yi-yuan-li-fu-xi-zong-jie-ji-si-wei-dao-tu/"/>
-    <id>https://so-peace.com/2020/02/11/bian-yi-yuan-li-fu-xi-zong-jie-ji-si-wei-dao-tu/</id>
-    <published>2020-02-11T15:48:37.000Z</published>
-    <updated>2021-05-09T12:36:55.552Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;文章声明&quot;&gt;&lt;a href=&quot;#文章声明&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="计算机基础" scheme="https://so-peace.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="编译原理" scheme="https://so-peace.com/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
