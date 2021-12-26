@@ -283,6 +283,58 @@
   </entry>
   
   <entry>
+    <title>从朴素贝叶斯到隐马尔可夫模型的基础知识</title>
+    <link href="https://so-peace.com/2020/09/12/cong-po-su-bei-xie-si-dao-yin-ma-er-ke-fu-mo-xing-de-ji-chu-zhi-shi/"/>
+    <id>https://so-peace.com/2020/09/12/cong-po-su-bei-xie-si-dao-yin-ma-er-ke-fu-mo-xing-de-ji-chu-zhi-shi/</id>
+    <published>2020-09-12T12:21:23.000Z</published>
+    <updated>2021-12-26T11:59:59.481Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;./pic/latex2/1.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;br&gt;&lt;img src=&quot;./pic/latex2/2.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;br&gt;&lt;img src=&quot;./pic/latex2/3.jpg&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="概率模型基础" scheme="https://so-peace.com/categories/%E6%A6%82%E7%8E%87%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="概率" scheme="https://so-peace.com/tags/%E6%A6%82%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>概率论基础与马尔科夫蒙特卡洛采样</title>
+    <link href="https://so-peace.com/2020/09/03/gai-lu-lun-ji-chu-yu-ma-er-ke-fu-meng-te-qia-luo-cai-yang/"/>
+    <id>https://so-peace.com/2020/09/03/gai-lu-lun-ji-chu-yu-ma-er-ke-fu-meng-te-qia-luo-cai-yang/</id>
+    <published>2020-09-03T14:25:23.000Z</published>
+    <updated>2021-12-26T11:56:50.418Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;./pic/latex1/1.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;br&gt;&lt;img src=&quot;./pic/latex1/2.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;br&gt;&lt;img src=&quot;./pic/latex1/3.jpg&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="概率论基础" scheme="https://so-peace.com/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="概率" scheme="https://so-peace.com/tags/%E6%A6%82%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>机器学习常用九大算法</title>
     <link href="https://so-peace.com/2020/07/17/ji-qi-xue-xi-chang-yong-jiu-da-suan-fa/"/>
     <id>https://so-peace.com/2020/07/17/ji-qi-xue-xi-chang-yong-jiu-da-suan-fa/</id>
@@ -487,58 +539,6 @@
     
     
       <category term="日语文化" scheme="https://so-peace.com/tags/%E6%97%A5%E8%AF%AD%E6%96%87%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《定投十年财务自由》总结</title>
-    <link href="https://so-peace.com/2020/02/29/ding-tou-shi-nian-cai-wu-zi-you-zong-jie/"/>
-    <id>https://so-peace.com/2020/02/29/ding-tou-shi-nian-cai-wu-zi-you-zong-jie/</id>
-    <published>2020-02-29T14:25:23.000Z</published>
-    <updated>2021-05-09T14:25:42.471Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;参考书本：银行螺丝钉的《定投十年财务自由》&quot;&gt;&lt;a href=&quot;#参考书本：银行螺丝钉的《定投十年财务自由》&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="金融" scheme="https://so-peace.com/categories/%E9%87%91%E8%9E%8D/"/>
-    
-    
-      <category term="金融启蒙" scheme="https://so-peace.com/tags/%E9%87%91%E8%9E%8D%E5%90%AF%E8%92%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编译原理复习总结及思维导图</title>
-    <link href="https://so-peace.com/2020/02/11/bian-yi-yuan-li-fu-xi-zong-jie-ji-si-wei-dao-tu/"/>
-    <id>https://so-peace.com/2020/02/11/bian-yi-yuan-li-fu-xi-zong-jie-ji-si-wei-dao-tu/</id>
-    <published>2020-02-11T15:48:37.000Z</published>
-    <updated>2021-05-09T12:36:55.552Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;文章声明&quot;&gt;&lt;a href=&quot;#文章声明&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="计算机基础" scheme="https://so-peace.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="编译原理" scheme="https://so-peace.com/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
