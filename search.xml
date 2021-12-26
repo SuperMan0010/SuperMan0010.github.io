@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>从朴素贝叶斯到隐马尔可夫模型的基础知识</title>
+      <link href="/2021/09/12/cong-po-su-bei-xie-si-dao-yin-ma-er-ke-fu-mo-xing-de-ji-chu-zhi-shi/"/>
+      <url>/2021/09/12/cong-po-su-bei-xie-si-dao-yin-ma-er-ke-fu-mo-xing-de-ji-chu-zhi-shi/</url>
+      
+        <content type="html"><![CDATA[<img src="../../../../medias/pic/latex2/1.jpg"><img src="../../../../medias/pic/latex2/2.jpg"><img src="../../../../medias/pic/latex2/3.jpg"><img src="../../../../medias/pic/latex2/4.jpg"><img src="../../../../medias/pic/latex2/5.jpg"><img src="../../../../medias/pic/latex2/6.jpg"><img src="../../../../medias/pic/latex2/7.jpg"><img src="../../../../medias/pic/latex2/8.jpg">]]></content>
+      
+      
+      <categories>
+          
+          <category> 概率模型基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 概率 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>概率论基础与马尔科夫蒙特卡洛采样</title>
+      <link href="/2021/09/03/gai-lu-lun-ji-chu-yu-ma-er-ke-fu-meng-te-qia-luo-cai-yang/"/>
+      <url>/2021/09/03/gai-lu-lun-ji-chu-yu-ma-er-ke-fu-meng-te-qia-luo-cai-yang/</url>
+      
+        <content type="html"><![CDATA[<img src="../../../../medias/pic/latex1/1.jpg"><img src="../../../../medias/pic/latex1/2.jpg"><img src="../../../../medias/pic/latex1/3.jpg"><img src="../../../../medias/pic/latex1/4.jpg"><img src="../../../../medias/pic/latex1/5.jpg"><img src="../../../../medias/pic/latex1/6.jpg">]]></content>
+      
+      
+      <categories>
+          
+          <category> 概率论基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 概率 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《量化炼金术：中低频量化交易策略研发》总结</title>
       <link href="/2021/06/12/liang-hua-lian-jin-zhu-zhong-di-pin-liang-hua-jiao-yi-ce-lue-yan-fa-zong-jie/"/>
       <url>/2021/06/12/liang-hua-lian-jin-zhu-zhong-di-pin-liang-hua-jiao-yi-ce-lue-yan-fa-zong-jie/</url>
@@ -252,56 +302,6 @@
         <tags>
             
             <tag> 模型 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>从朴素贝叶斯到隐马尔可夫模型的基础知识</title>
-      <link href="/2020/09/12/cong-po-su-bei-xie-si-dao-yin-ma-er-ke-fu-mo-xing-de-ji-chu-zhi-shi/"/>
-      <url>/2020/09/12/cong-po-su-bei-xie-si-dao-yin-ma-er-ke-fu-mo-xing-de-ji-chu-zhi-shi/</url>
-      
-        <content type="html"><![CDATA[<p><img src="../../../../medias/pic/latex2/1.jpg" alt="avatar"><br><img src="../../../../medias/pic/latex2/2.jpg" alt="avatar"><br><img src="../../../../medias/pic/latex2/3.jpg" alt="avatar"><br><img src="../../../../medias/pic/latex2/4.jpg" alt="avatar"><br><img src="../../../../medias/pic/latex2/5.jpg" alt="avatar"><br><img src="../../../../medias/pic/latex2/6.jpg" alt="avatar"><br><img src="../../../../medias/pic/latex2/7.jpg" alt="avatar"><br><img src="../../../../medias/pic/latex2/8.jpg" alt="avatar"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 概率模型基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 概率 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>概率论基础与马尔科夫蒙特卡洛采样</title>
-      <link href="/2020/09/03/gai-lu-lun-ji-chu-yu-ma-er-ke-fu-meng-te-qia-luo-cai-yang/"/>
-      <url>/2020/09/03/gai-lu-lun-ji-chu-yu-ma-er-ke-fu-meng-te-qia-luo-cai-yang/</url>
-      
-        <content type="html"><![CDATA[<p><img src="./pic/latex1/1.jpg" alt="avatar"><br><img src="./pic/latex1/2.jpg" alt="avatar"><br><img src="./pic/latex1/3.jpg" alt="avatar"><br><img src="./pic/latex1/4.jpg" alt="avatar"><br><img src="./pic/latex1/5.jpg" alt="avatar"><br><img src="./pic/latex1/6.jpg" alt="avatar"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 概率论基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 概率 </tag>
             
         </tags>
       
