@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://so-peace.com/"/>
-  <updated>2021-12-26T12:19:21.254Z</updated>
+  <updated>2021-12-27T14:59:02.797Z</updated>
   <id>https://so-peace.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021年终总结</title>
+    <link href="https://so-peace.com/2021/12/26/2021-nian-zhong-zong-jie/"/>
+    <id>https://so-peace.com/2021/12/26/2021-nian-zhong-zong-jie/</id>
+    <published>2021-12-26T15:48:19.000Z</published>
+    <updated>2021-12-27T14:59:02.797Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;年初的时候，我应该还在闵行校区看书，在外面租了个小房间。那段日子最惬意的事情莫过于每日在秋实阁就餐后，一路懒洋洋地走到大学林散步，总喜欢脚踩着满地落叶，时不时发出吱吱声。&lt;/p&gt;
+&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="年终总结" scheme="https://so-peace.com/categories/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="随笔" scheme="https://so-peace.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>从朴素贝叶斯到隐马尔可夫模型的基础知识</title>
@@ -521,32 +548,6 @@
     
     
       <category term="日语会话" scheme="https://so-peace.com/tags/%E6%97%A5%E8%AF%AD%E4%BC%9A%E8%AF%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日本文化常识之历史篇</title>
-    <link href="https://so-peace.com/2020/03/08/ri-ben-wen-hua-chang-shi-zhi-li-shi-pian/"/>
-    <id>https://so-peace.com/2020/03/08/ri-ben-wen-hua-chang-shi-zhi-li-shi-pian/</id>
-    <published>2020-03-08T14:48:53.000Z</published>
-    <updated>2021-05-09T12:43:17.822Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;参考资料：华东理工大学出版社的《晨读夜诵-每天读一点日本文化常识大全》&quot;&gt;&lt;a href=&quot;#参考资料：华东理工大学出版社的《晨读夜诵-每天读一点日本文化常识大全》&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="日语" scheme="https://so-peace.com/categories/%E6%97%A5%E8%AF%AD/"/>
-    
-    
-      <category term="日语文化" scheme="https://so-peace.com/tags/%E6%97%A5%E8%AF%AD%E6%96%87%E5%8C%96/"/>
     
   </entry>
   
